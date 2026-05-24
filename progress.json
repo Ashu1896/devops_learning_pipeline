@@ -1,10 +1,9 @@
 {
-  "completed": [
+  "completed": [],
+  "pending": [
     "Linux (Part 1)",
     "Linux (Part 2)",
-    "Linux (Part 3)"
-  ],
-  "pending": [
+    "Linux (Part 3)",
     "Networking (Part 1)",
     "Networking (Part 2)",
     "Networking (Part 3)",
@@ -150,28 +149,7 @@
     "Production deployment strategies (Part 2)",
     "Production deployment strategies (Part 3)"
   ],
-  "percentage": 2.04,
-  "last_run": "2026-05-25T01:51:19.843436",
-  "history": [
-    {
-      "topic": "Linux (Part 1)",
-      "timestamp": "2026-05-25T01:43:24.749899"
-    },
-    {
-      "topic": "Linux (Part 2)",
-      "timestamp": "2026-05-25T01:43:40.518193"
-    },
-    {
-      "topic": "Linux (Part 3)",
-      "timestamp": "2026-05-25T01:43:47.339927"
-    },
-    {
-      "topic": "Linux (Part 2)",
-      "timestamp": "2026-05-25T01:51:07.961584"
-    },
-    {
-      "topic": "Linux (Part 3)",
-      "timestamp": "2026-05-25T01:51:19.843436"
-    }
-  ]
+  "percentage": 0.0,
+  "last_run": null,
+  "history": []
 }

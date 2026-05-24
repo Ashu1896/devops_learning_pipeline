@@ -17,6 +17,13 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 # Git config
 GIT_REMOTE_PUSH = os.getenv("GIT_REMOTE_PUSH", "true").lower() == "true"
 
+# SMTP Email Configurations
+SMTP_SERVER = os.getenv("SMTP_SERVER", "smtp.gmail.com")
+SMTP_PORT = int(os.getenv("SMTP_PORT", "587"))
+SMTP_USERNAME = os.getenv("SMTP_USERNAME")
+SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
+EMAIL_TO = os.getenv("EMAIL_TO", "ashusharma181996@gmail.com")
+
 def get_api_client_config():
     """
     Returns the configured API type and key, defaulting to Gemini.

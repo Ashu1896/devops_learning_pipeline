@@ -44,8 +44,10 @@ def git_commit_and_push(topic_name: str, topic_dir: Path):
         relative_topic_path = topic_dir.relative_to(base_dir)
         
         logger.info("Staging files...")
+        # Stage all modified and deleted tracked files (including progress.json and unlinked old PDF/PPTX assets)
+        run_git_cmd(["git", "add", "-u"], base_dir)
+        # Stage the newly created untracked topic files
         run_git_cmd(["git", "add", str(relative_topic_path)], base_dir)
-        run_git_cmd(["git", "add", "progress.json"], base_dir)
         if (base_dir / "pipeline.log").exists():
             run_git_cmd(["git", "add", "pipeline.log"], base_dir)
             

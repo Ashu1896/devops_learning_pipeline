@@ -3,7 +3,7 @@ import argparse
 import json
 from pathlib import Path
 from datetime import datetime
-from src.config import get_api_client_config
+from src.config import get_api_client_config, BASE_DIR
 from src.utils import (
     logger,
     load_progress,
@@ -15,6 +15,24 @@ from src.researcher import research_topic
 from src.pdf_generator import compile_to_pdf
 from src.ppt_generator import generate_pptx
 from src.git_helper import git_commit_and_push
+from src.email_helper import send_email_notification
+
+def cleanup_old_assets(current_pdf: Path, current_pptx: Path):
+    """
+    Finds and deletes any other PDF or PPTX files in the project workspace to keep Git clean.
+    """
+    logger.info("Pruning old study manuals and presentations from workspace...")
+    for ext in ["*.pdf", "*.pptx"]:
+        for file_path in BASE_DIR.rglob(ext):
+            if "venv" in file_path.parts or ".venv" in file_path.parts or ".git" in file_path.parts:
+                continue
+            if file_path.resolve() == current_pdf.resolve() or file_path.resolve() == current_pptx.resolve():
+                continue
+            try:
+                file_path.unlink()
+                logger.info(f"Deleted old asset: {file_path.relative_to(BASE_DIR)}")
+            except Exception as e:
+                logger.warning(f"Could not delete old asset {file_path}: {e}")
 
 def print_progress_dashboard(progress: dict):
     """
@@ -141,6 +159,9 @@ def main():
         logger.error(f"PDF generation failed: {e}")
         sys.exit(1)
         
+    # --- PRUNING OLD FILES ---
+    cleanup_old_assets(pdf_file, pptx_file)
+        
     # 6. Generate metadata.json
     logger.info("Writing metadata.json records...")
     metadata = {
@@ -164,6 +185,15 @@ def main():
     # Reload and print updated dashboard
     updated_progress = load_progress()
     print_progress_dashboard(updated_progress)
+    
+    # --- EMAIL NOTIFICATION DELIVERY ---
+    send_email_notification(
+        selected_topic,
+        part,
+        pdf_file,
+        pptx_file,
+        updated_progress.get("percentage", 0.0)
+    )
     
     # 8. Git Integration (Automatic check-in)
     git_commit_and_push(f"{selected_topic} (Part {part})", folders["base"])

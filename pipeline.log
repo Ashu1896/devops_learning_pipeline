@@ -290,3 +290,41 @@ and then push using the remote name
 2026-05-25 01:51:20,174 [INFO] Creating commit: 'Added DevOps Learning Content - Linux (Part 3)'
 2026-05-25 01:51:20,340 [INFO] Remote push disabled. Local commit created successfully.
 2026-05-25 01:51:20,340 [INFO] Pipeline executed successfully.
+2026-05-25 02:32:42,073 [INFO] Pipeline started processing topic: 'Linux' | Part: 1
+2026-05-25 02:32:42,074 [INFO] Ensuring folder structure...
+2026-05-25 02:32:42,075 [INFO] Ensured folder: D:\Agentic_AI\linux\part1
+2026-05-25 02:32:42,075 [INFO] Ensured folder: D:\Agentic_AI\linux\part1\presentation
+2026-05-25 02:32:42,075 [INFO] Ensured folder: D:\Agentic_AI\linux\part1\pdf
+2026-05-25 02:32:42,075 [INFO] Ensured folder: D:\Agentic_AI\linux\part1\assets\diagrams
+2026-05-25 02:32:42,075 [INFO] Ensured folder: D:\Agentic_AI\linux\part1\notes
+2026-05-25 02:32:42,076 [INFO] Executing deep technical research for Linux Part 1...
+2026-05-25 02:32:42,076 [INFO] Generating mock research data for topic: Linux | Part: 1
+2026-05-25 02:32:42,076 [INFO] Writing study guide and notes...
+2026-05-25 02:32:42,076 [INFO] Generating PPTX for 'Linux - Part 1' using python-pptx...
+2026-05-25 02:32:42,165 [INFO] Successfully generated beautiful presentation at: D:\Agentic_AI\linux\part1\presentation\linux-part1.pptx
+2026-05-25 02:32:42,165 [INFO] Compiling PDF for topic 'Linux - Part 1' using fpdf2...
+2026-05-25 02:32:42,342 [INFO] Successfully generated beautiful PDF guide at: D:\Agentic_AI\linux\part1\pdf\linux-part1.pdf
+2026-05-25 02:32:42,342 [INFO] Pruning old study manuals and presentations from workspace...
+2026-05-25 02:32:42,361 [INFO] Deleted old asset: linux\part2\pdf\linux-part2.pdf
+2026-05-25 02:32:42,363 [INFO] Deleted old asset: linux\part3\pdf\linux-part3.pdf
+2026-05-25 02:32:42,364 [INFO] Deleted old asset: linux\pdf\linux.pdf
+2026-05-25 02:32:42,375 [INFO] Deleted old asset: linux\part2\presentation\linux-part2.pptx
+2026-05-25 02:32:42,378 [INFO] Deleted old asset: linux\part3\presentation\linux-part3.pptx
+2026-05-25 02:32:42,379 [INFO] Deleted old asset: linux\presentation\linux.pptx
+2026-05-25 02:32:42,380 [INFO] Writing metadata.json records...
+2026-05-25 02:32:42,381 [INFO] Progress updated: Linux (Part 1) marked completed. Completion: 0.68%
+2026-05-25 02:32:42,390 [INFO] ============================================================
+2026-05-25 02:32:42,390 [INFO]             DEVOPS LEARNING PIPELINE DASHBOARD
+2026-05-25 02:32:42,390 [INFO] ============================================================
+2026-05-25 02:32:42,390 [INFO]  Completion Status: [------------------------------] 0.68%
+2026-05-25 02:32:42,390 [INFO]  Completed Topics:  1 / 147
+2026-05-25 02:32:42,390 [INFO]  Next Topic Up:     Linux (Part 2)
+2026-05-25 02:32:42,390 [INFO] ------------------------------------------------------------
+2026-05-25 02:32:42,390 [INFO]  Last Studied:      Linux (Part 1)
+2026-05-25 02:32:42,390 [INFO] ============================================================
+2026-05-25 02:32:42,391 [WARNING] SMTP username/password not configured in environment. Skipping email delivery.
+2026-05-25 02:32:42,391 [INFO] Initiating Git check-in for topic: Linux (Part 1) at root D:\Agentic_AI
+2026-05-25 02:32:42,391 [INFO] Staging files...
+2026-05-25 02:32:42,532 [INFO] Creating commit: 'Added DevOps Learning Content - Linux (Part 1)'
+2026-05-25 02:32:42,630 [INFO] Remote push disabled. Local commit created successfully.
+2026-05-25 02:32:42,631 [INFO] Pipeline executed successfully.

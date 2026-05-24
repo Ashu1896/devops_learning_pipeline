@@ -50,6 +50,8 @@ jobs:
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         GIT_REMOTE_PUSH: "true" # Ensure it pushes changes back to the repo
+        SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+        SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
       run: |
         # Build command based on manual triggers if present
         CMD="python pipeline.py"
