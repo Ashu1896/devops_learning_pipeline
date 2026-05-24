@@ -1,0 +1,41 @@
+2026-05-25 01:13:32,013 [INFO] Pipeline started processing topic: 'Linux'
+2026-05-25 01:13:32,013 [INFO] Ensuring folder structure...
+2026-05-25 01:13:32,016 [INFO] Ensured folder: D:\Agentic_AI\linux
+2026-05-25 01:13:32,017 [INFO] Ensured folder: D:\Agentic_AI\linux\presentation
+2026-05-25 01:13:32,017 [INFO] Ensured folder: D:\Agentic_AI\linux\pdf
+2026-05-25 01:13:32,019 [INFO] Ensured folder: D:\Agentic_AI\linux\assets\diagrams
+2026-05-25 01:13:32,020 [INFO] Ensured folder: D:\Agentic_AI\linux\notes
+2026-05-25 01:13:32,020 [INFO] Executing deep technical research...
+2026-05-25 01:13:32,020 [INFO] Generating mock research data for topic: Linux
+2026-05-25 01:13:32,020 [INFO] Writing study guide and notes...
+2026-05-25 01:13:32,021 [INFO] Generating PPTX for 'Linux' using python-pptx...
+2026-05-25 01:13:32,326 [INFO] Successfully generated beautiful presentation at: D:\Agentic_AI\linux\presentation\linux.pptx
+2026-05-25 01:13:32,326 [INFO] Compiling PDF for topic 'Linux' using fpdf2...
+2026-05-25 01:13:32,336 [ERROR] PDF generation failed: Character "•" at index 28 in text is outside the range of characters supported by the font used: "helveticaI". Please consider using a Unicode font.
+2026-05-25 01:13:53,146 [INFO] Pipeline started processing topic: 'Linux'
+2026-05-25 01:13:53,146 [INFO] Ensuring folder structure...
+2026-05-25 01:13:53,147 [INFO] Ensured folder: D:\Agentic_AI\linux
+2026-05-25 01:13:53,148 [INFO] Ensured folder: D:\Agentic_AI\linux\presentation
+2026-05-25 01:13:53,148 [INFO] Ensured folder: D:\Agentic_AI\linux\pdf
+2026-05-25 01:13:53,149 [INFO] Ensured folder: D:\Agentic_AI\linux\assets\diagrams
+2026-05-25 01:13:53,149 [INFO] Ensured folder: D:\Agentic_AI\linux\notes
+2026-05-25 01:13:53,150 [INFO] Executing deep technical research...
+2026-05-25 01:13:53,150 [INFO] Generating mock research data for topic: Linux
+2026-05-25 01:13:53,150 [INFO] Writing study guide and notes...
+2026-05-25 01:13:53,151 [INFO] Generating PPTX for 'Linux' using python-pptx...
+2026-05-25 01:13:53,296 [INFO] Successfully generated beautiful presentation at: D:\Agentic_AI\linux\presentation\linux.pptx
+2026-05-25 01:13:53,296 [INFO] Compiling PDF for topic 'Linux' using fpdf2...
+2026-05-25 01:13:53,371 [INFO] Successfully generated beautiful PDF guide at: D:\Agentic_AI\linux\pdf\linux.pdf
+2026-05-25 01:13:53,372 [INFO] Writing metadata.json records...
+2026-05-25 01:13:53,375 [INFO] Progress updated: Linux marked completed. Completion: 2.04%
+2026-05-25 01:13:53,392 [INFO] ============================================================
+2026-05-25 01:13:53,392 [INFO]             DEVOPS LEARNING PIPELINE DASHBOARD
+2026-05-25 01:13:53,393 [INFO] ============================================================
+2026-05-25 01:13:53,393 [INFO]  Completion Status: [=-----------------------------] 2.04%
+2026-05-25 01:13:53,394 [INFO]  Completed Topics:  1 / 49
+2026-05-25 01:13:53,394 [INFO]  Next Topic Up:     Networking
+2026-05-25 01:13:53,394 [INFO] ------------------------------------------------------------
+2026-05-25 01:13:53,394 [INFO]  Last Studied:      Linux
+2026-05-25 01:13:53,394 [INFO] ============================================================
+2026-05-25 01:13:53,395 [INFO] Initiating Git check-in for topic: Linux at root D:\Agentic_AI
+2026-05-25 01:13:53,395 [INFO] Staging files...

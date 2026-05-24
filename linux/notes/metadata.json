@@ -1,0 +1,11 @@
+{
+  "topic": "Linux",
+  "generated_at": "2026-05-25T01:13:53.372977",
+  "dry_run": true,
+  "engine": "Mock-Engine",
+  "files": {
+    "notes": "/linux/notes/summary.md",
+    "pdf": "/linux/pdf/linux.pdf",
+    "presentation": "/linux/presentation/linux.pptx"
+  }
+}

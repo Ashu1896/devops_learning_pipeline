@@ -1,0 +1,63 @@
+{
+  "completed": [
+    "Linux"
+  ],
+  "pending": [
+    "Networking",
+    "Git",
+    "GitHub",
+    "CI/CD",
+    "Jenkins",
+    "Docker",
+    "Kubernetes",
+    "Helm",
+    "Terraform",
+    "Ansible",
+    "AWS",
+    "Azure",
+    "GCP",
+    "Python for DevOps",
+    "Bash scripting",
+    "Monitoring",
+    "Grafana",
+    "Prometheus",
+    "ELK Stack",
+    "ArgoCD",
+    "GitOps",
+    "Security",
+    "IAM",
+    "DevSecOps",
+    "SRE",
+    "Incident Management",
+    "Cloud Architecture",
+    "Infrastructure as Code",
+    "Testing tools",
+    "SonarQube",
+    "Nexus",
+    "Artifactory",
+    "Kafka",
+    "RabbitMQ",
+    "Nginx",
+    "Apache",
+    "Load Balancer",
+    "High Availability",
+    "System Design",
+    "Database concepts",
+    "Production troubleshooting",
+    "Middleware",
+    "Observability",
+    "Platform Engineering",
+    "AI in DevOps",
+    "Advanced Kubernetes",
+    "Advanced Terraform",
+    "Production deployment strategies"
+  ],
+  "percentage": 2.04,
+  "last_run": "2026-05-25T01:13:53.374805",
+  "history": [
+    {
+      "topic": "Linux",
+      "timestamp": "2026-05-25T01:13:53.374805"
+    }
+  ]
+}
