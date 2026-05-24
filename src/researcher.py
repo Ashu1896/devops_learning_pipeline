@@ -24,6 +24,7 @@ def call_llm(prompt: str, api_type: str, api_key: str, system_instruction: str =
         try:
             import google.generativeai as genai
             genai.configure(api_key=api_key)
+            
             # Dynamically query available models in user's key catalog to prevent 404 model-not-found errors
             try:
                 actual_models = [m.name for m in genai.list_models()]
@@ -80,7 +81,7 @@ def generate_mock_data(topic: str, part: int = 1) -> dict:
     """
     Generates high-fidelity, production-grade mock data for offline testing or dry-runs.
     For the topic 'Linux', compiles three separate, high-fidelity manuals (Part 1, Part 2, Part 3)
-    containing 50 total deep technical questions.
+    containing EXACTLY 50 total deep technical questions with zero truncations.
     """
     logger.info(f"Generating mock research data for topic: {topic} | Part: {part}")
     
@@ -437,7 +438,86 @@ Seccomp (Secure Computing Mode) enables the kernel to instantly terminate a proc
 **Detailed Answer**: `vm.max_map_count` defines the limit of virtual memory map zones. Elasticsearch uses `mmap` to store indexes, requiring thousands of map areas.
 **Production Scenario**: If `vm.max_map_count` is not bumped to at least 262144, Elasticsearch daemons will crash on startup with memory allocation failures.
 
-... (Truncated for dry-run space; full version generates 20 full questions) ...
+### Q26. How do you configure and optimize BBR TCP Congestion Control in Linux?
+**Detailed Answer**: BBR (Bottleneck Bandwidth and RTT) is a modern congestion control algorithm developed by Google. To enable BBR, load the kernel module and tune net.core default queuing discipline to `fq` (Fair Queuing) via sysctl:
+```ini
+net.core.default_qdisc = fq
+net.ipv4.tcp_congestion_control = bbr
+```
+**Production Scenario**: Enabling BBR on high-bandwidth, high-latency cross-region connections reduces packet loss retransmission bottlenecks and boosts transfer throughput by up to 10x.
+
+### Q27. Explain TCP socket buffer auto-scaling mechanics under Linux.
+**Detailed Answer**: The kernel dynamically scales TCP read/write buffer thresholds using parameters set in `net.ipv4.tcp_rmem` and `net.ipv4.tcp_wmem` (specifying min, default, and max buffer byte sizes).
+**Production Scenario**: On a 10Gbps NIC, if max buffers are capped too low (e.g. 128KB), high latency links stall data streams because the sender exhausts the TCP receive window before receiving packet ACKs.
+
+### Q28. What is CPU Affinity and how do you bind production services to specific cores?
+**Detailed Answer**: CPU Affinity binds running application threads to dedicated CPU cores, preventing CFS thread migration overhead. Configure it using `taskset -c <CPU_LIST> -p <PID>` or via the `CPUAffinity=` directive in systemd unit files.
+**Production Scenario**: A highly loaded Redis instance is bound to physical CPU core 1, eliminating cache invalidation lag and reducing request processing variance to sub-milliseconds.
+
+### Q29. When is running 'sysctl -w vm.drop_caches=3' dangerous in production?
+**Detailed Answer**: Setting `vm.drop_caches=3` instructs the kernel to immediately reclaim all clean page caches, dentries, and inodes in RAM, forcing the system to read all file blocks directly from physical storage.
+**Production Scenario**: Executing this on a high-throughput active database server instantly spikes disk queue utilization to 100% and blocks database queries as the filesystem attempts to rebuild cache blocks.
+
+### Q30. How do you simulate high network latency and packet loss for chaos engineering testing?
+**Detailed Answer**: Use the Linux `tc` (Traffic Control) network emulator tool. The command below injects 100ms latency and 5% packet loss on the `eth0` network interface:
+```bash
+sudo tc qdisc add dev eth0 root netem delay 100ms loss 5%
+```
+To remove the constraint: `sudo tc qdisc del dev eth0 root`.
+**Production Scenario**: Running this tool in a staging Kubernetes namespace validates that backend microservices can gracefully trigger connection timeouts and fallback retries.
+
+### Q31. What is the SRE impact of net.ipv4.tcp_tw_reuse on high-concurrency servers?
+**Detailed Answer**: In high-traffic environments, client sockets quickly enter the `TIME_WAIT` state (duration 60s) after closing, consuming available source ports. Enabling `net.ipv4.tcp_tw_reuse = 1` allows the kernel to safely reuse active `TIME_WAIT` sockets for outgoing connections.
+**Production Scenario**: Bumping this parameter on backend proxy systems prevents outbound socket pool exhaustion errors (e.g. "Cannot assign requested address") during connection peaks.
+
+### Q32. How do you adjust service priority and protect critical daemons against OOM events in systemd?
+**Detailed Answer**: Configure `OOMScoreAdjust=-1000` (to completely exempt the process) or `MemoryLimit=` inside the systemd service configurations.
+**Production Scenario**: Exclude critical proxies and log forwarders from OOM killer triggers, ensuring web application containers are terminated first if host memory is depleted.
+
+### Q33. How does the kernel govern shared memory allocations for large databases like PostgreSQL?
+**Detailed Answer**: Through kernel parameters `shmmax` (maximum single shared segment size) and `shmall` (total shared memory pages allocation) managed via sysctl.
+**Production Scenario**: A PostgreSQL cluster fails to initialize its memory buffers because `shmmax` is smaller than the configured `shared_buffers` size, requiring an update to `sysctl.conf` to set `shmmax` to 80% of RAM.
+
+### Q34. What is CFS Bandwidth Throttling and how does it trigger Kubernetes pod latency?
+**Detailed Answer**: Under Kubernetes, container CPU limits translate to CFS quotas. The kernel CFS scheduler tracks CPU cycles consumed during 100ms periods. If a container exhausts its quota before the period ends, it is throttled until the quota resets.
+**Production Scenario**: A Java app experiences latency spikes even with average CPU usage at 30%. SREs check `/sys/fs/cgroup/cpu/cpu.stat` and find `nr_throttled` count rising, prompting them to increase CPU limits or disable hard CFS quotas.
+
+### Q35. How do you diagnose inode exhaustion when a filesystem reports ample free space?
+**Detailed Answer**: Run `df -i` to view the percentage of available filesystem inodes. Ext4 and XFS allocate a fixed number of inodes during formatting; if thousands of tiny files are written, inodes exhaust first.
+**Production Scenario**: An API uploads massive numbers of micro-session temp files. Disk capacity is at 20% but `df -i` shows 100% inode saturation. No new files can be written until temp directories are purged.
+
+### Q36. What is PAM (Pluggable Authentication Modules) and how does it restrict system resources?
+**Detailed Answer**: PAM manages system authentication rules and loads security sessions. The resource limits configured in `/etc/security/limits.conf` (e.g., maximum open files, process limits) are applied during session initialization via the `pam_limits.so` module.
+**Production Scenario**: A newly deployed database user is blocked from scaling active connections until `/etc/security/limits.conf` is updated to define `dbuser hard nofile 65535`.
+
+### Q37. What is Slab fragmentation and how does it trigger page allocation failures?
+**Detailed Answer**: The Slab allocator manages small memory pieces for kernel objects. Over time, sparse object allocations leave fragmented spaces. When a system requests contiguous memory, page allocation failures occur despite high total free memory.
+**Production Scenario**: Highly loaded virtual nodes trigger kernel page allocation dumps in `dmesg`, indicating cache memory must be compacted or Slab memory reclaimed.
+
+### Q38. How do you use bpftrace to inspect kernel file open calls in real-time?
+**Detailed Answer**: `bpftrace` compiles BPF scripts and attaches them directly to kernel probes. Below is a command tracking which PIDs call `sys_enter_open` system calls:
+```bash
+sudo bpftrace -e 'tracepoint:syscalls:sys_enter_open { printf("%d: %s opens %s\n", pid, comm, str(args->filename)); }'
+```
+**Production Scenario**: Tracing file access patterns of an unknown binary reveals it is continuously accessing config paths, isolating a configuration leak.
+
+### Q39. What are the key hardening configurations for SSH service daemons?
+**Detailed Answer**: Edit `/etc/ssh/sshd_config` to enforce:
+```ini
+PermitRootLogin no
+PasswordAuthentication no
+PubkeyAuthentication yes
+MaxAuthTries 3
+ClientAliveInterval 300
+```
+**Production Scenario**: Applying these configurations across VM clusters shuts down automated brute-force password scans.
+
+### Q40. How do vm.overcommit_memory modes protect systems against sudden OOM events?
+**Detailed Answer**: `vm.overcommit_memory` controls kernel memory allocations:
+* **0 (Heuristic)**: Kernel makes educated guesses based on free margins.
+* **1 (Always)**: Allocates all requested memory blocks.
+* **2 (Strict)**: Allocation is bounded strictly by swap size + a configured percentage of RAM.
+**Production Scenario**: Setting overcommit to `2` prevents processes from allocation surprises, ensuring databases fail predictably at runtime instead of getting killed suddenly by the OOM killer.
 """
 
             slides = [
@@ -562,6 +642,36 @@ groups:
 ### Q45. Explain how socket buffer depletion drops packets before reaching the TCP stack.
 **Detailed Answer**: When high network packet spikes hit a network card, they are placed in kernel socket queues (SND/RCV buffers). If processes cannot read from the socket queue fast enough, the buffers fill up and incoming packets are dropped.
 **Production Scenario**: A high-concurrency microservice drops connection requests during peaks. Running `ss -s` or `netstat -s` reveals "packet receive errors" increasing. SREs resolve by tuning `net.core.rmem_max` and adjusting TCP buffer margins.
+
+### Q46. How do you debug memory fragmentation issues inside JVM host nodes?
+**Detailed Answer**: Memory fragmentation prevents the kernel from allocating contiguous blocks. Trace allocations in `/proc/buddyinfo` and use `sysctl -w vm.compact_memory=1` to force contiguous block compactions.
+**Production Scenario**: A JVM host node dumps page allocation failures in syslogs despite showing 40% total free RAM, causing memory compaction runs that block GC threads and trigger microservice latency spikes.
+
+### Q47. Explain how lock contention ('spinlocks') saturates CPUs under heavy network forwarding.
+**Detailed Answer**: Spinlocks cause CPU cores to continuously poll a locked memory address in a tight loop instead of sleeping. When multiple cores compete for a single queue lock, they saturate CPU in System (`sy`) space.
+**Production Scenario**: A packet router handling millions of packets/sec shows CPU core usage at 100% in system mode. Profiling with `perf` shows `_raw_spin_lock` occupying 60% of CPU time, indicating interface queues must be split.
+
+### Q48. What is the impact of ARP cache overflows on cluster network communications?
+**Detailed Answer**: The ARP table stores IP-to-MAC maps. When cluster hosts exceed the ARP threshold (`net.ipv4.neigh.default.gc_thresh3`), new entries are blocked, dropping outgoing network packets.
+**Production Scenario**: A newly scaled Kubernetes cluster of 2,000 nodes loses connection to standard resources. `dmesg` logs "neighbor table overflow". Resolving requires raising `gc_thresh1/2/3` limits to handle larger host counts.
+
+### Q49. Formulate a Prometheus alerting rule to detect dirty memory page writeback saturation.
+**Detailed Answer**: Monitor the rate of dirty page backlogs relative to disk write limits by tracking disk queue saturation and dirty page trends:
+```yaml
+- alert: HighKernelDirtyPages
+  expr: (node_memory_Dirty_bytes / node_memory_MemTotal_bytes) * 100 > 8
+  for: 5m
+  labels:
+    severity: warning
+  annotations:
+    summary: "High dirty page backlog on {{ $labels.instance }}"
+    description: "Dirty pages exceed 8% of total RAM, threatening filesystem sync blocks."
+```
+**Production Scenario**: Alerting on this allows SREs to proactively detect disk storage slow-downs before dirty flushes throttle database writes.
+
+### Q50. How do you diagnose a system with a load average of 150 but CPU utilization at only 5%?
+**Detailed Answer**: Under Linux, the load average counts processes in two states: **Runnable (R)** and **Uninterruptible Sleep (D)**. Low CPU utilization with elevated load averages indicates that almost all 150 processes are blocked in the 'D' state waiting for storage, disk queuing, or NFS mounts.
+**Production Scenario**: An SRE logs in during an outage. CPU is at 2%, but load average is at 180. Running `vmstat 1` reveals the `b` (blocked) column shows 150 processes. Checking `dmesg` confirms storage connection failures, identifying disk block outages.
 """
 
             slides = [
