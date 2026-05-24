@@ -1,0 +1,12 @@
+{
+  "topic": "Linux",
+  "part": 3,
+  "generated_at": "2026-05-25T01:43:47.337811",
+  "dry_run": true,
+  "engine": "Mock-Engine",
+  "files": {
+    "notes": "/linux/part3/notes/summary.md",
+    "pdf": "/linux/part3/pdf/linux-part3.pdf",
+    "presentation": "/linux/part3/presentation/linux-part3.pptx"
+  }
+}
