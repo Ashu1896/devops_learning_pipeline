@@ -124,3 +124,64 @@ and then push using the remote name
 2026-05-25 01:38:24,967 [INFO] ============================================================
 2026-05-25 01:38:24,974 [INFO] Initiating Git check-in for topic: Linux at root /mnt/d/Agentic_AI
 2026-05-25 01:38:24,978 [INFO] Staging files...
+2026-05-25 01:38:25,945 [INFO] Creating commit: 'Added DevOps Learning Content - Linux'
+2026-05-25 01:38:27,734 [INFO] Remote push disabled. Local commit created successfully.
+2026-05-25 01:38:27,735 [INFO] Pipeline executed successfully.
+2026-05-25 01:43:24,087 [INFO] Pipeline started processing topic: 'Linux' | Part: 1
+2026-05-25 01:43:24,089 [INFO] Ensuring folder structure...
+2026-05-25 01:43:24,090 [INFO] Ensured folder: D:\Agentic_AI\linux\part1
+2026-05-25 01:43:24,091 [INFO] Ensured folder: D:\Agentic_AI\linux\part1\presentation
+2026-05-25 01:43:24,093 [INFO] Ensured folder: D:\Agentic_AI\linux\part1\pdf
+2026-05-25 01:43:24,094 [INFO] Ensured folder: D:\Agentic_AI\linux\part1\assets\diagrams
+2026-05-25 01:43:24,094 [INFO] Ensured folder: D:\Agentic_AI\linux\part1\notes
+2026-05-25 01:43:24,095 [INFO] Executing deep technical research for Linux Part 1...
+2026-05-25 01:43:24,095 [INFO] Generating mock research data for topic: Linux | Part: 1
+2026-05-25 01:43:24,095 [INFO] Writing study guide and notes...
+2026-05-25 01:43:24,098 [INFO] Generating PPTX for 'Linux - Part 1' using python-pptx...
+2026-05-25 01:43:24,271 [INFO] Successfully generated beautiful presentation at: D:\Agentic_AI\linux\part1\presentation\linux-part1.pptx
+2026-05-25 01:43:24,271 [INFO] Compiling PDF for topic 'Linux - Part 1' using fpdf2...
+2026-05-25 01:43:24,748 [INFO] Successfully generated beautiful PDF guide at: D:\Agentic_AI\linux\part1\pdf\linux-part1.pdf
+2026-05-25 01:43:24,748 [INFO] Writing metadata.json records...
+2026-05-25 01:43:24,751 [INFO] Progress updated: Linux (Part 1) marked completed. Completion: 0.68%
+2026-05-25 01:43:24,774 [INFO] ============================================================
+2026-05-25 01:43:24,774 [INFO]             DEVOPS LEARNING PIPELINE DASHBOARD
+2026-05-25 01:43:24,775 [INFO] ============================================================
+2026-05-25 01:43:24,776 [INFO]  Completion Status: [------------------------------] 0.68%
+2026-05-25 01:43:24,776 [INFO]  Completed Topics:  1 / 147
+2026-05-25 01:43:24,776 [INFO]  Next Topic Up:     Linux (Part 2)
+2026-05-25 01:43:24,776 [INFO] ------------------------------------------------------------
+2026-05-25 01:43:24,776 [INFO]  Last Studied:      Linux (Part 1)
+2026-05-25 01:43:24,776 [INFO] ============================================================
+2026-05-25 01:43:24,777 [INFO] Initiating Git check-in for topic: Linux (Part 1) at root D:\Agentic_AI\linux
+2026-05-25 01:43:24,900 [INFO] Staging files...
+2026-05-25 01:43:25,127 [ERROR] Git execution failed (command: git add progress.json): fatal: pathspec 'progress.json' did not match any files
+
+2026-05-25 01:43:25,127 [ERROR] Failed Git check-in workflow: Command '['git', 'add', 'progress.json']' returned non-zero exit status 128.
+2026-05-25 01:43:25,127 [INFO] Pipeline executed successfully.
+2026-05-25 01:43:40,255 [INFO] Pipeline started processing topic: 'Linux' | Part: 2
+2026-05-25 01:43:40,255 [INFO] Ensuring folder structure...
+2026-05-25 01:43:40,257 [INFO] Ensured folder: D:\Agentic_AI\linux\part2
+2026-05-25 01:43:40,257 [INFO] Ensured folder: D:\Agentic_AI\linux\part2\presentation
+2026-05-25 01:43:40,258 [INFO] Ensured folder: D:\Agentic_AI\linux\part2\pdf
+2026-05-25 01:43:40,260 [INFO] Ensured folder: D:\Agentic_AI\linux\part2\assets\diagrams
+2026-05-25 01:43:40,260 [INFO] Ensured folder: D:\Agentic_AI\linux\part2\notes
+2026-05-25 01:43:40,260 [INFO] Executing deep technical research for Linux Part 2...
+2026-05-25 01:43:40,261 [INFO] Generating mock research data for topic: Linux | Part: 2
+2026-05-25 01:43:40,261 [INFO] Writing study guide and notes...
+2026-05-25 01:43:40,262 [INFO] Generating PPTX for 'Linux - Part 2' using python-pptx...
+2026-05-25 01:43:40,408 [INFO] Successfully generated beautiful presentation at: D:\Agentic_AI\linux\part2\presentation\linux-part2.pptx
+2026-05-25 01:43:40,409 [INFO] Compiling PDF for topic 'Linux - Part 2' using fpdf2...
+2026-05-25 01:43:40,515 [INFO] Successfully generated beautiful PDF guide at: D:\Agentic_AI\linux\part2\pdf\linux-part2.pdf
+2026-05-25 01:43:40,515 [INFO] Writing metadata.json records...
+2026-05-25 01:43:40,519 [INFO] Progress updated: Linux (Part 2) marked completed. Completion: 1.36%
+2026-05-25 01:43:40,542 [INFO] ============================================================
+2026-05-25 01:43:40,543 [INFO]             DEVOPS LEARNING PIPELINE DASHBOARD
+2026-05-25 01:43:40,543 [INFO] ============================================================
+2026-05-25 01:43:40,543 [INFO]  Completion Status: [------------------------------] 1.36%
+2026-05-25 01:43:40,543 [INFO]  Completed Topics:  2 / 147
+2026-05-25 01:43:40,543 [INFO]  Next Topic Up:     Linux (Part 3)
+2026-05-25 01:43:40,544 [INFO] ------------------------------------------------------------
+2026-05-25 01:43:40,544 [INFO]  Last Studied:      Linux (Part 2)
+2026-05-25 01:43:40,544 [INFO] ============================================================
+2026-05-25 01:43:40,544 [INFO] Initiating Git check-in for topic: Linux (Part 2) at root D:\Agentic_AI
+2026-05-25 01:43:40,545 [INFO] Staging files...
