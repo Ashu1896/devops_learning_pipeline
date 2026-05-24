@@ -215,3 +215,45 @@ and then push using the remote name
 2026-05-25 01:43:47,362 [INFO] ============================================================
 2026-05-25 01:43:47,362 [INFO] Initiating Git check-in for topic: Linux (Part 3) at root D:\Agentic_AI
 2026-05-25 01:43:47,363 [INFO] Staging files...
+2026-05-25 01:43:47,673 [INFO] Creating commit: 'Added DevOps Learning Content - Linux (Part 3)'
+2026-05-25 01:43:47,861 [INFO] Remote push disabled. Local commit created successfully.
+2026-05-25 01:43:47,861 [INFO] Pipeline executed successfully.
+2026-05-25 01:46:40,283 [INFO] Pipeline started processing topic: 'Networking' | Part: 1
+2026-05-25 01:46:40,284 [INFO] Ensuring folder structure...
+2026-05-25 01:46:40,304 [INFO] Ensured folder: /mnt/d/Agentic_AI/networking/part1
+2026-05-25 01:46:40,311 [INFO] Ensured folder: /mnt/d/Agentic_AI/networking/part1/presentation
+2026-05-25 01:46:40,318 [INFO] Ensured folder: /mnt/d/Agentic_AI/networking/part1/pdf
+2026-05-25 01:46:40,336 [INFO] Ensured folder: /mnt/d/Agentic_AI/networking/part1/assets/diagrams
+2026-05-25 01:46:40,343 [INFO] Ensured folder: /mnt/d/Agentic_AI/networking/part1/notes
+2026-05-25 01:46:40,344 [INFO] Executing deep technical research for Networking Part 1...
+2026-05-25 01:46:40,345 [INFO] Initiating deep research for topic: Networking | Part: 1 using API: gemini
+2026-05-25 01:46:40,346 [INFO] Stage 1/3: Generating Study Guide for Part 1...
+2026-05-25 01:46:42,640 [ERROR] Gemini API invocation failed: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+2026-05-25 01:46:42,641 [ERROR] Research failed: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+2026-05-25 01:51:07,511 [INFO] Pipeline started processing topic: 'Linux' | Part: 2
+2026-05-25 01:51:07,513 [INFO] Ensuring folder structure...
+2026-05-25 01:51:07,515 [INFO] Ensured folder: D:\Agentic_AI\linux\part2
+2026-05-25 01:51:07,516 [INFO] Ensured folder: D:\Agentic_AI\linux\part2\presentation
+2026-05-25 01:51:07,516 [INFO] Ensured folder: D:\Agentic_AI\linux\part2\pdf
+2026-05-25 01:51:07,517 [INFO] Ensured folder: D:\Agentic_AI\linux\part2\assets\diagrams
+2026-05-25 01:51:07,517 [INFO] Ensured folder: D:\Agentic_AI\linux\part2\notes
+2026-05-25 01:51:07,518 [INFO] Executing deep technical research for Linux Part 2...
+2026-05-25 01:51:07,518 [INFO] Generating mock research data for topic: Linux | Part: 2
+2026-05-25 01:51:07,518 [INFO] Writing study guide and notes...
+2026-05-25 01:51:07,519 [INFO] Generating PPTX for 'Linux - Part 2' using python-pptx...
+2026-05-25 01:51:07,691 [INFO] Successfully generated beautiful presentation at: D:\Agentic_AI\linux\part2\presentation\linux-part2.pptx
+2026-05-25 01:51:07,691 [INFO] Compiling PDF for topic 'Linux - Part 2' using fpdf2...
+2026-05-25 01:51:07,959 [INFO] Successfully generated beautiful PDF guide at: D:\Agentic_AI\linux\part2\pdf\linux-part2.pdf
+2026-05-25 01:51:07,960 [INFO] Writing metadata.json records...
+2026-05-25 01:51:07,963 [INFO] Progress updated: Linux (Part 2) marked completed. Completion: 2.04%
+2026-05-25 01:51:07,994 [INFO] ============================================================
+2026-05-25 01:51:07,994 [INFO]             DEVOPS LEARNING PIPELINE DASHBOARD
+2026-05-25 01:51:07,995 [INFO] ============================================================
+2026-05-25 01:51:07,995 [INFO]  Completion Status: [=-----------------------------] 2.04%
+2026-05-25 01:51:07,995 [INFO]  Completed Topics:  3 / 147
+2026-05-25 01:51:07,995 [INFO]  Next Topic Up:     Networking (Part 1)
+2026-05-25 01:51:07,995 [INFO] ------------------------------------------------------------
+2026-05-25 01:51:07,995 [INFO]  Last Studied:      Linux (Part 3)
+2026-05-25 01:51:07,995 [INFO] ============================================================
+2026-05-25 01:51:07,996 [INFO] Initiating Git check-in for topic: Linux (Part 2) at root D:\Agentic_AI
+2026-05-25 01:51:07,996 [INFO] Staging files...
