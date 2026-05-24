@@ -1,0 +1,5 @@
+python-pptx==0.6.23
+fpdf2==2.7.8
+google-generativeai==0.8.3
+openai==1.14.3
+python-dotenv==1.0.1

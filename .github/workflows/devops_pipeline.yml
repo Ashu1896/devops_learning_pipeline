@@ -1,0 +1,64 @@
+name: DevOps Learning Pipeline Automation
+
+on:
+  schedule:
+    # Runs twice every week: Tuesday and Friday at 20:00 UTC (1:30 AM IST Wednesday and Saturday)
+    - cron: '0 20 * * 2,5'
+  workflow_dispatch:
+    # Allows manual triggering from the GitHub Actions UI
+    inputs:
+      topic:
+        description: 'Specify topic to run (leave empty for next sequential topic)'
+        required: false
+        default: ''
+      force:
+        description: 'Force regeneration of completed topic (true/false)'
+        required: false
+        default: 'false'
+
+permissions:
+  contents: write  # Crucial to allow committing/pushing generated files
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0 # Get all history for push capabilities
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-start-version: '3.11'
+        python-version: '3.11'
+        cache: 'pip'
+
+    - name: Install Python Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Configure Git Credentials
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+    - name: Run DevOps Learning Pipeline
+      env:
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        GIT_REMOTE_PUSH: "true" # Ensure it pushes changes back to the repo
+      run: |
+        # Build command based on manual triggers if present
+        CMD="python pipeline.py"
+        if [ ! -z "${{ github.event.inputs.topic }}" ]; then
+          CMD="$CMD --topic \"${{ github.event.inputs.topic }}\""
+        fi
+        if [ "${{ github.event.inputs.force }}" = "true" ]; then
+          CMD="$CMD --force"
+        fi
+        
+        echo "Executing: $CMD"
+        eval $CMD
