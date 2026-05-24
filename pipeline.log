@@ -94,3 +94,33 @@ and then push using the remote name
 2026-05-25 01:32:44,496 [INFO] ============================================================
 2026-05-25 01:32:44,497 [INFO] Initiating Git check-in for topic: Linux at root D:\Agentic_AI
 2026-05-25 01:32:44,497 [INFO] Staging files...
+2026-05-25 01:32:44,882 [INFO] Creating commit: 'Added DevOps Learning Content - Linux'
+2026-05-25 01:32:45,103 [INFO] Remote push disabled. Local commit created successfully.
+2026-05-25 01:32:45,103 [INFO] Pipeline executed successfully.
+2026-05-25 01:38:23,762 [INFO] Pipeline started processing topic: 'Linux'
+2026-05-25 01:38:23,764 [INFO] Ensuring folder structure...
+2026-05-25 01:38:23,781 [INFO] Ensured folder: /mnt/d/Agentic_AI/linux
+2026-05-25 01:38:23,790 [INFO] Ensured folder: /mnt/d/Agentic_AI/linux/presentation
+2026-05-25 01:38:23,799 [INFO] Ensured folder: /mnt/d/Agentic_AI/linux/pdf
+2026-05-25 01:38:23,812 [INFO] Ensured folder: /mnt/d/Agentic_AI/linux/assets/diagrams
+2026-05-25 01:38:23,822 [INFO] Ensured folder: /mnt/d/Agentic_AI/linux/notes
+2026-05-25 01:38:23,823 [INFO] Executing deep technical research...
+2026-05-25 01:38:23,824 [INFO] Generating mock research data for topic: Linux
+2026-05-25 01:38:23,825 [INFO] Writing study guide and notes...
+2026-05-25 01:38:23,929 [INFO] Generating PPTX for 'Linux' using python-pptx...
+2026-05-25 01:38:24,279 [INFO] Successfully generated beautiful presentation at: /mnt/d/Agentic_AI/linux/presentation/linux.pptx
+2026-05-25 01:38:24,280 [INFO] Compiling PDF for topic 'Linux' using fpdf2...
+2026-05-25 01:38:24,830 [INFO] Successfully generated beautiful PDF guide at: /mnt/d/Agentic_AI/linux/pdf/linux.pdf
+2026-05-25 01:38:24,831 [INFO] Writing metadata.json records...
+2026-05-25 01:38:24,918 [INFO] Progress updated: Linux marked completed. Completion: 2.04%
+2026-05-25 01:38:24,960 [INFO] ============================================================
+2026-05-25 01:38:24,961 [INFO]             DEVOPS LEARNING PIPELINE DASHBOARD
+2026-05-25 01:38:24,962 [INFO] ============================================================
+2026-05-25 01:38:24,963 [INFO]  Completion Status: [=-----------------------------] 2.04%
+2026-05-25 01:38:24,964 [INFO]  Completed Topics:  1 / 49
+2026-05-25 01:38:24,965 [INFO]  Next Topic Up:     Networking
+2026-05-25 01:38:24,966 [INFO] ------------------------------------------------------------
+2026-05-25 01:38:24,966 [INFO]  Last Studied:      Linux
+2026-05-25 01:38:24,967 [INFO] ============================================================
+2026-05-25 01:38:24,974 [INFO] Initiating Git check-in for topic: Linux at root /mnt/d/Agentic_AI
+2026-05-25 01:38:24,978 [INFO] Staging files...
