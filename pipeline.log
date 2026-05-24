@@ -39,3 +39,58 @@
 2026-05-25 01:13:53,394 [INFO] ============================================================
 2026-05-25 01:13:53,395 [INFO] Initiating Git check-in for topic: Linux at root D:\Agentic_AI
 2026-05-25 01:13:53,395 [INFO] Staging files...
+2026-05-25 01:13:53,735 [INFO] Creating commit: 'Added DevOps Learning Content - Linux'
+2026-05-25 01:13:53,929 [INFO] Pushing committed changes to remote repository...
+2026-05-25 01:13:54,013 [ERROR] Git execution failed (command: git push): fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+2026-05-25 01:13:54,013 [ERROR] Failed Git check-in workflow: Command '['git', 'push']' returned non-zero exit status 128.
+2026-05-25 01:13:54,015 [INFO] Pipeline executed successfully.
+2026-05-25 01:32:22,103 [INFO] Pipeline started processing topic: 'Linux'
+2026-05-25 01:32:22,106 [INFO] Ensuring folder structure...
+2026-05-25 01:32:22,107 [INFO] Ensured folder: D:\Agentic_AI\linux
+2026-05-25 01:32:22,107 [INFO] Ensured folder: D:\Agentic_AI\linux\presentation
+2026-05-25 01:32:22,107 [INFO] Ensured folder: D:\Agentic_AI\linux\pdf
+2026-05-25 01:32:22,108 [INFO] Ensured folder: D:\Agentic_AI\linux\assets\diagrams
+2026-05-25 01:32:22,109 [INFO] Ensured folder: D:\Agentic_AI\linux\notes
+2026-05-25 01:32:22,109 [INFO] Executing deep technical research...
+2026-05-25 01:32:22,109 [INFO] Generating mock research data for topic: Linux
+2026-05-25 01:32:22,109 [INFO] Writing study guide and notes...
+2026-05-25 01:32:22,111 [INFO] Generating PPTX for 'Linux' using python-pptx...
+2026-05-25 01:32:22,282 [INFO] Successfully generated beautiful presentation at: D:\Agentic_AI\linux\presentation\linux.pptx
+2026-05-25 01:32:22,284 [INFO] Compiling PDF for topic 'Linux' using fpdf2...
+2026-05-25 01:32:22,468 [ERROR] PDF generation failed: Not enough horizontal space to render a single character
+2026-05-25 01:32:43,831 [INFO] Pipeline started processing topic: 'Linux'
+2026-05-25 01:32:43,831 [INFO] Ensuring folder structure...
+2026-05-25 01:32:43,833 [INFO] Ensured folder: D:\Agentic_AI\linux
+2026-05-25 01:32:43,833 [INFO] Ensured folder: D:\Agentic_AI\linux\presentation
+2026-05-25 01:32:43,834 [INFO] Ensured folder: D:\Agentic_AI\linux\pdf
+2026-05-25 01:32:43,835 [INFO] Ensured folder: D:\Agentic_AI\linux\assets\diagrams
+2026-05-25 01:32:43,835 [INFO] Ensured folder: D:\Agentic_AI\linux\notes
+2026-05-25 01:32:43,835 [INFO] Executing deep technical research...
+2026-05-25 01:32:43,835 [INFO] Generating mock research data for topic: Linux
+2026-05-25 01:32:43,835 [INFO] Writing study guide and notes...
+2026-05-25 01:32:43,836 [INFO] Generating PPTX for 'Linux' using python-pptx...
+2026-05-25 01:32:43,987 [INFO] Successfully generated beautiful presentation at: D:\Agentic_AI\linux\presentation\linux.pptx
+2026-05-25 01:32:43,988 [INFO] Compiling PDF for topic 'Linux' using fpdf2...
+2026-05-25 01:32:44,468 [INFO] Successfully generated beautiful PDF guide at: D:\Agentic_AI\linux\pdf\linux.pdf
+2026-05-25 01:32:44,468 [INFO] Writing metadata.json records...
+2026-05-25 01:32:44,471 [INFO] Progress updated: Linux marked completed. Completion: 2.04%
+2026-05-25 01:32:44,494 [INFO] ============================================================
+2026-05-25 01:32:44,494 [INFO]             DEVOPS LEARNING PIPELINE DASHBOARD
+2026-05-25 01:32:44,495 [INFO] ============================================================
+2026-05-25 01:32:44,495 [INFO]  Completion Status: [=-----------------------------] 2.04%
+2026-05-25 01:32:44,495 [INFO]  Completed Topics:  1 / 49
+2026-05-25 01:32:44,495 [INFO]  Next Topic Up:     Networking
+2026-05-25 01:32:44,496 [INFO] ------------------------------------------------------------
+2026-05-25 01:32:44,496 [INFO]  Last Studied:      Linux
+2026-05-25 01:32:44,496 [INFO] ============================================================
+2026-05-25 01:32:44,497 [INFO] Initiating Git check-in for topic: Linux at root D:\Agentic_AI
+2026-05-25 01:32:44,497 [INFO] Staging files...
