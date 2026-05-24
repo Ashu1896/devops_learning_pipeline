@@ -257,3 +257,33 @@ and then push using the remote name
 2026-05-25 01:51:07,995 [INFO] ============================================================
 2026-05-25 01:51:07,996 [INFO] Initiating Git check-in for topic: Linux (Part 2) at root D:\Agentic_AI
 2026-05-25 01:51:07,996 [INFO] Staging files...
+2026-05-25 01:51:08,306 [INFO] Creating commit: 'Added DevOps Learning Content - Linux (Part 2)'
+2026-05-25 01:51:08,472 [INFO] Remote push disabled. Local commit created successfully.
+2026-05-25 01:51:08,472 [INFO] Pipeline executed successfully.
+2026-05-25 01:51:19,431 [INFO] Pipeline started processing topic: 'Linux' | Part: 3
+2026-05-25 01:51:19,432 [INFO] Ensuring folder structure...
+2026-05-25 01:51:19,432 [INFO] Ensured folder: D:\Agentic_AI\linux\part3
+2026-05-25 01:51:19,433 [INFO] Ensured folder: D:\Agentic_AI\linux\part3\presentation
+2026-05-25 01:51:19,433 [INFO] Ensured folder: D:\Agentic_AI\linux\part3\pdf
+2026-05-25 01:51:19,433 [INFO] Ensured folder: D:\Agentic_AI\linux\part3\assets\diagrams
+2026-05-25 01:51:19,434 [INFO] Ensured folder: D:\Agentic_AI\linux\part3\notes
+2026-05-25 01:51:19,434 [INFO] Executing deep technical research for Linux Part 3...
+2026-05-25 01:51:19,435 [INFO] Generating mock research data for topic: Linux | Part: 3
+2026-05-25 01:51:19,435 [INFO] Writing study guide and notes...
+2026-05-25 01:51:19,436 [INFO] Generating PPTX for 'Linux - Part 3' using python-pptx...
+2026-05-25 01:51:19,602 [INFO] Successfully generated beautiful presentation at: D:\Agentic_AI\linux\part3\presentation\linux-part3.pptx
+2026-05-25 01:51:19,603 [INFO] Compiling PDF for topic 'Linux - Part 3' using fpdf2...
+2026-05-25 01:51:19,841 [INFO] Successfully generated beautiful PDF guide at: D:\Agentic_AI\linux\part3\pdf\linux-part3.pdf
+2026-05-25 01:51:19,842 [INFO] Writing metadata.json records...
+2026-05-25 01:51:19,844 [INFO] Progress updated: Linux (Part 3) marked completed. Completion: 2.04%
+2026-05-25 01:51:19,860 [INFO] ============================================================
+2026-05-25 01:51:19,862 [INFO]             DEVOPS LEARNING PIPELINE DASHBOARD
+2026-05-25 01:51:19,862 [INFO] ============================================================
+2026-05-25 01:51:19,862 [INFO]  Completion Status: [=-----------------------------] 2.04%
+2026-05-25 01:51:19,862 [INFO]  Completed Topics:  3 / 147
+2026-05-25 01:51:19,862 [INFO]  Next Topic Up:     Networking (Part 1)
+2026-05-25 01:51:19,862 [INFO] ------------------------------------------------------------
+2026-05-25 01:51:19,862 [INFO]  Last Studied:      Linux (Part 3)
+2026-05-25 01:51:19,862 [INFO] ============================================================
+2026-05-25 01:51:19,862 [INFO] Initiating Git check-in for topic: Linux (Part 3) at root D:\Agentic_AI
+2026-05-25 01:51:19,863 [INFO] Staging files...
