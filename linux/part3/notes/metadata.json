@@ -1,0 +1,12 @@
+{
+  "topic": "Linux",
+  "part": 3,
+  "generated_at": "2026-05-29T21:32:45.675951",
+  "dry_run": false,
+  "engine": "gemini",
+  "files": {
+    "notes": "/linux/part3/notes/summary.md",
+    "pdf": "/linux/part3/pdf/linux-part3.pdf",
+    "presentation": "/linux/part3/presentation/linux-part3.pptx"
+  }
+}
