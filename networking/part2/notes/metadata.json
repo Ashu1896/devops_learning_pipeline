@@ -1,0 +1,12 @@
+{
+  "topic": "Networking",
+  "part": 2,
+  "generated_at": "2026-06-07T11:41:55.998430",
+  "dry_run": false,
+  "engine": "gemini",
+  "files": {
+    "notes": "/networking/part2/notes/summary.md",
+    "pdf": "/networking/part2/pdf/networking-part2.pdf",
+    "presentation": "/networking/part2/presentation/networking-part2.pptx"
+  }
+}
