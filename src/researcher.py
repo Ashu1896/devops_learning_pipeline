@@ -32,8 +32,6 @@ def call_llm(prompt: str, api_type: str, api_key: str, system_instruction: str =
                 logger.warning(f"Could not query Gemini model list: {ex}. Defaulting to gemini-2.5-flash.")
                 actual_models = []
                 
-            chosen_model = "gemini-2.5-flash"
-            # Preferences in descending order of capability/recency
             preferences = [
                 "models/gemini-3.5-flash",
                 "models/gemini-2.5-flash",
@@ -41,19 +39,73 @@ def call_llm(prompt: str, api_type: str, api_key: str, system_instruction: str =
                 "models/gemini-1.5-flash",
                 "models/gemini-flash-latest"
             ]
-            for candidate in preferences:
-                if candidate in actual_models:
-                    chosen_model = candidate
-                    break
-                    
-            logger.info(f"Selected best available model from API catalog: {chosen_model}")
             
-            model = genai.GenerativeModel(
-                model_name=chosen_model,
-                system_instruction=system_instruction if system_instruction else None
-            )
-            response = model.generate_content(prompt)
-            return response.text
+            # Find which preferences are actually available in user's catalog
+            available_models = [p for p in preferences if p in actual_models]
+            if not available_models:
+                available_models = ["models/gemini-2.5-flash", "models/gemini-1.5-flash"]
+            
+            logger.info(f"Available models in catalog: {available_models}")
+            
+            # Execute retry loop with dynamic parameter shifts and model fallback
+            last_exception = None
+            for attempt in range(1, 4):
+                # Pick model dynamically based on attempt index to fallback if a specific model blocks
+                model_to_use = available_models[(attempt - 1) % len(available_models)]
+                logger.info(f"Selected model for attempt {attempt}/3: {model_to_use}")
+                
+                try:
+                    model = genai.GenerativeModel(
+                        model_name=model_to_use,
+                        system_instruction=system_instruction if system_instruction else None
+                    )
+                    
+                    # Modify prompt on retries to bypass recitation/copyright block filters
+                    current_prompt = prompt
+                    if attempt > 1:
+                        current_prompt = (
+                            prompt + 
+                            "\n\nIMPORTANT: Please write the entire response in your own words. "
+                            "Ensure that all explanations, scenarios, questions, and answers are completely original, "
+                            "and do not recite or quote any existing sources, templates, or documentation verbatim to avoid recitation filters."
+                        )
+                    
+                    # Shift temperature to vary token sequencing and avoid reciting matches
+                    temp = 0.7 if attempt == 1 else (0.85 if attempt == 2 else 1.0)
+                    generation_config = genai.GenerationConfig(
+                        temperature=temp,
+                    )
+                    
+                    logger.info(f"Invoking model {model_to_use} (attempt {attempt}/3, temp={temp})...")
+                    response = model.generate_content(
+                        current_prompt,
+                        generation_config=generation_config
+                    )
+                    
+                    # Check candidates and their finish reason for recitation block (4)
+                    if response.candidates:
+                        first_cand = response.candidates[0]
+                        finish_reason = getattr(first_cand, 'finish_reason', None)
+                        if finish_reason:
+                            # 4 is RECITATION. Check enum value or name.
+                            if finish_reason == 4 or getattr(finish_reason, 'name', '') == 'RECITATION':
+                                logger.warning(f"Model {model_to_use} returned finish_reason RECITATION (4) on attempt {attempt}.")
+                                raise ValueError(f"Response blocked due to recitation/copyright filter on model {model_to_use}.")
+                    
+                    text = response.text
+                    if text:
+                        return text
+                    else:
+                        raise ValueError("Empty response returned from Gemini.")
+                        
+                except Exception as e:
+                    logger.warning(f"Attempt {attempt}/3 with model {model_to_use} failed: {e}")
+                    last_exception = e
+                    
+            logger.error("All Gemini invocation retries exhausted.")
+            if last_exception:
+                raise last_exception
+            raise ValueError("Gemini call failed on all attempts.")
         except Exception as e:
             logger.error(f"Gemini API invocation failed: {e}")
             raise e
