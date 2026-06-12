@@ -54,7 +54,6 @@ export const CameraCapture: React.FC<CameraCaptureProps> = ({ onAnalysisComplete
   const compressImage = (base64Str: string): Promise<string> => {
     return new Promise((resolve) => {
       const img = new Image();
-      img.src = base64Str;
       img.onload = () => {
         const canvas = document.createElement('canvas');
         const MAX_WIDTH = 800;
@@ -87,6 +86,7 @@ export const CameraCapture: React.FC<CameraCaptureProps> = ({ onAnalysisComplete
       img.onerror = () => {
         resolve(base64Str);
       };
+      img.src = base64Str;
     });
   };
 
