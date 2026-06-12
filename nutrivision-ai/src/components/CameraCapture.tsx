@@ -97,10 +97,12 @@ export const CameraCapture: React.FC<CameraCaptureProps> = ({ onAnalysisComplete
       const context = canvas.getContext('2d');
 
       if (context) {
-        // Match canvas dimensions to video feed
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+        // Match canvas dimensions to video feed, with safe defaults to avoid 0x0 canvas errors in Safari
+        const width = video.videoWidth || 640;
+        const height = video.videoHeight || 480;
+        canvas.width = width;
+        canvas.height = height;
+        context.drawImage(video, 0, 0, width, height);
         
         const dataUrl = canvas.toDataURL('image/jpeg');
         stopCamera();
@@ -199,13 +201,18 @@ export const CameraCapture: React.FC<CameraCaptureProps> = ({ onAnalysisComplete
         })
       });
 
-      if (!response.ok) {
-        throw new Error('Analysis request failed. Please check connection.');
+      let mealData;
+      try {
+        mealData = await response.json();
+      } catch (jsonErr) {
+        throw new Error('Failed to parse analysis response from server.');
       }
 
-      const mealData = await response.json();
+      if (!response.ok) {
+        throw new Error(mealData?.error || 'Analysis request failed. Please check connection.');
+      }
       
-      if (mealData.error) {
+      if (mealData?.error) {
         throw new Error(mealData.error);
       }
 
@@ -249,6 +256,7 @@ export const CameraCapture: React.FC<CameraCaptureProps> = ({ onAnalysisComplete
             ref={videoRef}
             autoPlay
             playsInline
+            muted
             className="w-full h-full object-cover"
           />
           {/* Grid overlay for framing */}

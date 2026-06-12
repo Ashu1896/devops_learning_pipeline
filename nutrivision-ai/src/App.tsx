@@ -17,6 +17,22 @@ export const App: React.FC = () => {
   const { fetchMeals, syncOfflineQueue } = useMealStore();
   const [activeTab, setActiveTab] = useState('dashboard');
   const [currentAnalysis, setCurrentAnalysis] = useState<{ meal: Meal; images: string[] } | null>(null);
+  const [debugLogs, setDebugLogs] = useState<string[]>([]);
+
+  useEffect(() => {
+    const handleError = (event: ErrorEvent) => {
+      setDebugLogs(prev => [...prev, `Error: ${event.message} at ${event.filename}:${event.lineno}`]);
+    };
+    const handleRejection = (event: PromiseRejectionEvent) => {
+      setDebugLogs(prev => [...prev, `Promise Rejected: ${event.reason}`]);
+    };
+    window.addEventListener('error', handleError);
+    window.addEventListener('unhandledrejection', handleRejection);
+    return () => {
+      window.removeEventListener('error', handleError);
+      window.removeEventListener('unhandledrejection', handleRejection);
+    };
+  }, []);
 
   // Initialize auth sessions on mount
   useEffect(() => {
@@ -104,6 +120,15 @@ export const App: React.FC = () => {
   return (
     <Layout activeTab={activeTab} setActiveTab={setActiveTab}>
       {renderContent()}
+      {debugLogs.length > 0 && (
+        <div className="fixed bottom-20 right-4 z-[9999] max-w-xs bg-slate-900/95 dark:bg-black/95 text-red-500 dark:text-red-400 p-4 rounded-2xl text-[10px] border border-red-500/30 max-h-48 overflow-y-auto font-mono shadow-2xl">
+          <div className="flex justify-between font-bold border-b border-red-500/20 pb-1 mb-1 text-slate-100">
+            <span>Debug Exceptions Console</span>
+            <button onClick={() => setDebugLogs([])} className="text-[9px] text-slate-400 hover:text-white uppercase font-bold">Clear</button>
+          </div>
+          {debugLogs.map((log, i) => <div key={i} className="mb-1 leading-tight break-words">{log}</div>)}
+        </div>
+      )}
     </Layout>
   );
 };
