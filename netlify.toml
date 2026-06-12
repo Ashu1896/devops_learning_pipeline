@@ -1,4 +1,5 @@
 [build]
+  base = "nutrivision-ai"
   command = "npm run build"
   publish = "dist"
   functions = "netlify/functions"
