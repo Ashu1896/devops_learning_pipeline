@@ -51,7 +51,46 @@ export const CameraCapture: React.FC<CameraCaptureProps> = ({ onAnalysisComplete
     setCameraActive(false);
   };
 
-  const capturePhoto = () => {
+  const compressImage = (base64Str: string): Promise<string> => {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.src = base64Str;
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        const MAX_WIDTH = 800;
+        const MAX_HEIGHT = 800;
+        let width = img.width;
+        let height = img.height;
+
+        if (width > height) {
+          if (width > MAX_WIDTH) {
+            height = Math.round((height * MAX_WIDTH) / width);
+            width = MAX_WIDTH;
+          }
+        } else {
+          if (height > MAX_HEIGHT) {
+            width = Math.round((width * MAX_HEIGHT) / height);
+            height = MAX_HEIGHT;
+          }
+        }
+
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext('2d');
+        if (ctx) {
+          ctx.drawImage(img, 0, 0, width, height);
+          resolve(canvas.toDataURL('image/jpeg', 0.75));
+        } else {
+          resolve(base64Str);
+        }
+      };
+      img.onerror = () => {
+        resolve(base64Str);
+      };
+    });
+  };
+
+  const capturePhoto = async () => {
     if (videoRef.current && canvasRef.current) {
       const video = videoRef.current;
       const canvas = canvasRef.current;
@@ -64,12 +103,24 @@ export const CameraCapture: React.FC<CameraCaptureProps> = ({ onAnalysisComplete
         context.drawImage(video, 0, 0, canvas.width, canvas.height);
         
         const dataUrl = canvas.toDataURL('image/jpeg');
-        if (images.length < 3) {
-          setImages(prev => [...prev, dataUrl]);
-        } else {
-          setError("You can upload a maximum of 3 images.");
-        }
         stopCamera();
+
+        setLoading(true);
+        try {
+          const compressed = await compressImage(dataUrl);
+          if (images.length < 3) {
+            setImages(prev => [...prev, compressed]);
+          } else {
+            setError("You can upload a maximum of 3 images.");
+          }
+        } catch (err) {
+          console.error("Image compression error:", err);
+          if (images.length < 3) {
+            setImages(prev => [...prev, dataUrl]);
+          }
+        } finally {
+          setLoading(false);
+        }
       }
     }
   };
@@ -88,14 +139,32 @@ export const CameraCapture: React.FC<CameraCaptureProps> = ({ onAnalysisComplete
       const reader = new FileReader();
       reader.onload = (event) => {
         if (event.target?.result && typeof event.target.result === 'string') {
-          setImages(prev => {
-            if (prev.length < 3) {
-              return [...prev, event.target!.result as string];
-            } else {
-              setError("You can upload a maximum of 3 images.");
-              return prev;
-            }
-          });
+          setLoading(true);
+          compressImage(event.target.result)
+            .then(compressed => {
+              setImages(prev => {
+                if (prev.length < 3) {
+                  return [...prev, compressed];
+                } else {
+                  setError("You can upload a maximum of 3 images.");
+                  return prev;
+                }
+              });
+            })
+            .catch(err => {
+              console.error("Upload compression error:", err);
+              setImages(prev => {
+                if (prev.length < 3) {
+                  return [...prev, event.target!.result as string];
+                } else {
+                  setError("You can upload a maximum of 3 images.");
+                  return prev;
+                }
+              });
+            })
+            .finally(() => {
+              setLoading(false);
+            });
         }
       };
       reader.readAsDataURL(file);
