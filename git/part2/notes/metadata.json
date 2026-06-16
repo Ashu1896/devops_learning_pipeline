@@ -1,0 +1,12 @@
+{
+  "topic": "Git",
+  "part": 2,
+  "generated_at": "2026-06-16T22:07:25.440413",
+  "dry_run": false,
+  "engine": "gemini",
+  "files": {
+    "notes": "/git/part2/notes/summary.md",
+    "pdf": "/git/part2/pdf/git-part2.pdf",
+    "presentation": "/git/part2/presentation/git-part2.pptx"
+  }
+}
