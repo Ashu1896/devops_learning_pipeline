@@ -1,0 +1,12 @@
+{
+  "topic": "GitHub",
+  "part": 2,
+  "generated_at": "2026-06-26T21:17:54.661844",
+  "dry_run": false,
+  "engine": "gemini",
+  "files": {
+    "notes": "/github/part2/notes/summary.md",
+    "pdf": "/github/part2/pdf/github-part2.pdf",
+    "presentation": "/github/part2/presentation/github-part2.pptx"
+  }
+}
