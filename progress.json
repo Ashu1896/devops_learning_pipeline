@@ -10,10 +10,10 @@
     "Git (Part 2)",
     "Git (Part 3)",
     "GitHub (Part 1)",
-    "GitHub (Part 2)"
+    "GitHub (Part 2)",
+    "GitHub (Part 3)"
   ],
   "pending": [
-    "GitHub (Part 3)",
     "CI/CD (Part 1)",
     "CI/CD (Part 2)",
     "CI/CD (Part 3)",
@@ -150,8 +150,8 @@
     "Production deployment strategies (Part 2)",
     "Production deployment strategies (Part 3)"
   ],
-  "percentage": 7.48,
-  "last_run": "2026-06-26T21:17:54.662102",
+  "percentage": 8.16,
+  "last_run": "2026-06-30T21:26:17.443172",
   "history": [
     {
       "topic": "Linux (Part 1)",
@@ -196,6 +196,10 @@
     {
       "topic": "GitHub (Part 2)",
       "timestamp": "2026-06-26T21:17:54.662102"
+    },
+    {
+      "topic": "GitHub (Part 3)",
+      "timestamp": "2026-06-30T21:26:17.443172"
     }
   ]
 }

@@ -944,3 +944,75 @@ Please retry in 24.064692698s. [links {
 2026-06-26 21:17:56,715 [INFO] Successfully delivered study guides to your mailbox.
 2026-06-26 21:17:56,716 [INFO] Initiating Git check-in for topic: GitHub (Part 2) at root /home/runner/work/devops_learning_pipeline/devops_learning_pipeline
 2026-06-26 21:17:56,716 [INFO] Staging files...
+2026-06-30 21:20:08,511 [INFO] Pipeline started processing topic: 'GitHub' | Part: 3
+2026-06-30 21:20:08,511 [INFO] Ensuring folder structure...
+2026-06-30 21:20:08,511 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/github/part3
+2026-06-30 21:20:08,511 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/github/part3/presentation
+2026-06-30 21:20:08,512 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/github/part3/pdf
+2026-06-30 21:20:08,512 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/github/part3/assets/diagrams
+2026-06-30 21:20:08,512 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/github/part3/notes
+2026-06-30 21:20:08,512 [INFO] Executing deep technical research for GitHub Part 3...
+2026-06-30 21:20:08,512 [INFO] Initiating deep research for topic: GitHub | Part: 3 using API: gemini
+2026-06-30 21:20:08,512 [INFO] Stage 1/3: Generating Study Guide for Part 3...
+2026-06-30 21:20:09,125 [INFO] Available models in catalog: ['models/gemini-3.5-flash', 'models/gemini-2.5-flash', 'models/gemini-2.0-flash', 'models/gemini-flash-latest']
+2026-06-30 21:20:09,126 [INFO] Selected model for attempt 1/3: models/gemini-3.5-flash
+2026-06-30 21:20:09,126 [INFO] Invoking model models/gemini-3.5-flash (attempt 1/3, temp=0.7)...
+2026-06-30 21:21:58,042 [WARNING] Attempt 1/3 with model models/gemini-3.5-flash failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.5-flash
+Please retry in 1.977058662s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 5
+}
+, retry_delay {
+  seconds: 1
+}
+]
+2026-06-30 21:21:58,042 [INFO] Selected model for attempt 2/3: models/gemini-2.5-flash
+2026-06-30 21:21:58,042 [INFO] Invoking model models/gemini-2.5-flash (attempt 2/3, temp=0.85)...
+2026-06-30 21:24:06,261 [INFO] Stage 2/3: Generating Interview Preparation Section (Q41 to Q50)...
+2026-06-30 21:24:06,427 [INFO] Available models in catalog: ['models/gemini-3.5-flash', 'models/gemini-2.5-flash', 'models/gemini-2.0-flash', 'models/gemini-flash-latest']
+2026-06-30 21:24:06,428 [INFO] Selected model for attempt 1/3: models/gemini-3.5-flash
+2026-06-30 21:24:06,428 [INFO] Invoking model models/gemini-3.5-flash (attempt 1/3, temp=0.7)...
+2026-06-30 21:25:34,571 [INFO] Stage 3/3: Generating structured PowerPoint outlines...
+2026-06-30 21:25:34,739 [INFO] Available models in catalog: ['models/gemini-3.5-flash', 'models/gemini-2.5-flash', 'models/gemini-2.0-flash', 'models/gemini-flash-latest']
+2026-06-30 21:25:34,739 [INFO] Selected model for attempt 1/3: models/gemini-3.5-flash
+2026-06-30 21:25:34,739 [INFO] Invoking model models/gemini-3.5-flash (attempt 1/3, temp=0.7)...
+2026-06-30 21:26:16,252 [INFO] Writing study guide and notes...
+2026-06-30 21:26:16,252 [INFO] Generating PPTX for 'GitHub - Part 3' using python-pptx...
+2026-06-30 21:26:16,296 [INFO] Successfully generated beautiful presentation at: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/github/part3/presentation/github-part3.pptx
+2026-06-30 21:26:16,297 [INFO] Compiling PDF for topic 'GitHub - Part 3' using fpdf2...
+2026-06-30 21:26:17,438 [INFO] Successfully generated beautiful PDF guide at: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/github/part3/pdf/github-part3.pdf
+2026-06-30 21:26:17,438 [INFO] Pruning old study manuals and presentations from workspace...
+2026-06-30 21:26:17,439 [INFO] Deleted old asset: github/part2/pdf/github-part2.pdf
+2026-06-30 21:26:17,441 [INFO] Deleted old asset: github/part2/presentation/github-part2.pptx
+2026-06-30 21:26:17,442 [INFO] Writing metadata.json records...
+2026-06-30 21:26:17,443 [INFO] Progress updated: GitHub (Part 3) marked completed. Completion: 8.16%
+2026-06-30 21:26:17,443 [INFO] ============================================================
+2026-06-30 21:26:17,443 [INFO]             DEVOPS LEARNING PIPELINE DASHBOARD
+2026-06-30 21:26:17,443 [INFO] ============================================================
+2026-06-30 21:26:17,443 [INFO]  Completion Status: [==----------------------------] 8.16%
+2026-06-30 21:26:17,443 [INFO]  Completed Topics:  12 / 147
+2026-06-30 21:26:17,443 [INFO]  Next Topic Up:     CI/CD (Part 1)
+2026-06-30 21:26:17,443 [INFO] ------------------------------------------------------------
+2026-06-30 21:26:17,443 [INFO]  Last Studied:      GitHub (Part 3)
+2026-06-30 21:26:17,443 [INFO] ============================================================
+2026-06-30 21:26:17,443 [INFO] Initiating automated email delivery to: ashusharma181996@gmail.com...
+2026-06-30 21:26:17,447 [INFO] Connecting to SMTP server: smtp.gmail.com:587...
+2026-06-30 21:26:17,545 [INFO] Performing SMTP login authentication...
+2026-06-30 21:26:17,693 [INFO] Transmitting email payload...
+2026-06-30 21:26:19,254 [INFO] Successfully delivered study guides to your mailbox.
+2026-06-30 21:26:19,254 [INFO] Initiating Git check-in for topic: GitHub (Part 3) at root /home/runner/work/devops_learning_pipeline/devops_learning_pipeline
+2026-06-30 21:26:19,254 [INFO] Staging files...
