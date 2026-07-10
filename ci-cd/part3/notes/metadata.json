@@ -1,0 +1,12 @@
+{
+  "topic": "CI/CD",
+  "part": 3,
+  "generated_at": "2026-07-10T21:18:32.572352",
+  "dry_run": false,
+  "engine": "gemini",
+  "files": {
+    "notes": "/ci-cd/part3/notes/summary.md",
+    "pdf": "/ci-cd/part3/pdf/ci-cd-part3.pdf",
+    "presentation": "/ci-cd/part3/presentation/ci-cd-part3.pptx"
+  }
+}
