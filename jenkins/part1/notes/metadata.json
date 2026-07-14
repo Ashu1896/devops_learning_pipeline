@@ -1,0 +1,12 @@
+{
+  "topic": "Jenkins",
+  "part": 1,
+  "generated_at": "2026-07-14T20:54:43.101522",
+  "dry_run": false,
+  "engine": "gemini",
+  "files": {
+    "notes": "/jenkins/part1/notes/summary.md",
+    "pdf": "/jenkins/part1/pdf/jenkins-part1.pdf",
+    "presentation": "/jenkins/part1/presentation/jenkins-part1.pptx"
+  }
+}
