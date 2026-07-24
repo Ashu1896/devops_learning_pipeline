@@ -1,0 +1,12 @@
+{
+  "topic": "Docker",
+  "part": 1,
+  "generated_at": "2026-07-24T20:59:14.865692",
+  "dry_run": false,
+  "engine": "gemini",
+  "files": {
+    "notes": "/docker/part1/notes/summary.md",
+    "pdf": "/docker/part1/pdf/docker-part1.pdf",
+    "presentation": "/docker/part1/presentation/docker-part1.pptx"
+  }
+}
