@@ -1523,3 +1523,125 @@ Please retry in 4.985774585s. [links {
 2026-07-24 20:59:17,407 [INFO] Successfully delivered study guides to your mailbox.
 2026-07-24 20:59:17,407 [INFO] Initiating Git check-in for topic: Docker (Part 1) at root /home/runner/work/devops_learning_pipeline/devops_learning_pipeline
 2026-07-24 20:59:17,407 [INFO] Staging files...
+2026-07-28 20:54:22,546 [INFO] Pipeline started processing topic: 'Docker' | Part: 2
+2026-07-28 20:54:22,546 [INFO] Ensuring folder structure...
+2026-07-28 20:54:22,546 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/docker/part2
+2026-07-28 20:54:22,546 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/docker/part2/presentation
+2026-07-28 20:54:22,546 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/docker/part2/pdf
+2026-07-28 20:54:22,547 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/docker/part2/assets/diagrams
+2026-07-28 20:54:22,547 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/docker/part2/notes
+2026-07-28 20:54:22,547 [INFO] Executing deep technical research for Docker Part 2...
+2026-07-28 20:54:22,547 [INFO] Initiating deep research for topic: Docker | Part: 2 using API: gemini
+2026-07-28 20:54:22,547 [INFO] Stage 1/3: Generating Study Guide for Part 2...
+2026-07-28 20:54:23,393 [INFO] Available models in catalog: ['models/gemini-3.5-flash', 'models/gemini-2.5-flash', 'models/gemini-2.0-flash', 'models/gemini-flash-latest']
+2026-07-28 20:54:23,393 [INFO] Selected model for attempt 1/3: models/gemini-3.5-flash
+2026-07-28 20:54:23,394 [INFO] Invoking model models/gemini-3.5-flash (attempt 1/3, temp=0.7)...
+2026-07-28 20:58:45,916 [WARNING] Attempt 1/3 with model models/gemini-3.5-flash failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.5-flash
+Please retry in 14.111178692s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 14
+}
+]
+2026-07-28 20:58:45,916 [INFO] Selected model for attempt 2/3: models/gemini-2.5-flash
+2026-07-28 20:58:45,916 [INFO] Invoking model models/gemini-2.5-flash (attempt 2/3, temp=0.85)...
+2026-07-28 21:03:04,786 [INFO] Stage 2/3: Generating Interview Preparation Section (Q21 to Q40)...
+2026-07-28 21:03:05,184 [INFO] Available models in catalog: ['models/gemini-3.5-flash', 'models/gemini-2.5-flash', 'models/gemini-2.0-flash', 'models/gemini-flash-latest']
+2026-07-28 21:03:05,184 [INFO] Selected model for attempt 1/3: models/gemini-3.5-flash
+2026-07-28 21:03:05,185 [INFO] Invoking model models/gemini-3.5-flash (attempt 1/3, temp=0.7)...
+2026-07-28 21:03:11,549 [WARNING] Attempt 1/3 with model models/gemini-3.5-flash failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.5-flash
+Please retry in 48.498235943s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 48
+}
+]
+2026-07-28 21:03:11,551 [INFO] Selected model for attempt 2/3: models/gemini-2.5-flash
+2026-07-28 21:03:11,551 [INFO] Invoking model models/gemini-2.5-flash (attempt 2/3, temp=0.85)...
+2026-07-28 21:09:34,381 [INFO] Stage 3/3: Generating structured PowerPoint outlines...
+2026-07-28 21:09:34,757 [INFO] Available models in catalog: ['models/gemini-3.5-flash', 'models/gemini-2.5-flash', 'models/gemini-2.0-flash', 'models/gemini-flash-latest']
+2026-07-28 21:09:34,757 [INFO] Selected model for attempt 1/3: models/gemini-3.5-flash
+2026-07-28 21:09:34,757 [INFO] Invoking model models/gemini-3.5-flash (attempt 1/3, temp=0.7)...
+2026-07-28 21:09:34,885 [WARNING] Attempt 1/3 with model models/gemini-3.5-flash failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.5-flash
+Please retry in 25.138506402s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 25
+}
+]
+2026-07-28 21:09:34,885 [INFO] Selected model for attempt 2/3: models/gemini-2.5-flash
+2026-07-28 21:09:34,885 [INFO] Invoking model models/gemini-2.5-flash (attempt 2/3, temp=0.85)...
+2026-07-28 21:10:04,085 [INFO] Writing study guide and notes...
+2026-07-28 21:10:04,085 [INFO] Generating PPTX for 'Docker - Part 2' using python-pptx...
+2026-07-28 21:10:04,137 [INFO] Successfully generated beautiful presentation at: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/docker/part2/presentation/docker-part2.pptx
+2026-07-28 21:10:04,137 [INFO] Compiling PDF for topic 'Docker - Part 2' using fpdf2...
+2026-07-28 21:10:05,848 [INFO] Successfully generated beautiful PDF guide at: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/docker/part2/pdf/docker-part2.pdf
+2026-07-28 21:10:05,848 [INFO] Pruning old study manuals and presentations from workspace...
+2026-07-28 21:10:05,850 [INFO] Deleted old asset: docker/part1/pdf/docker-part1.pdf
+2026-07-28 21:10:05,853 [INFO] Deleted old asset: docker/part1/presentation/docker-part1.pptx
+2026-07-28 21:10:05,854 [INFO] Writing metadata.json records...
+2026-07-28 21:10:05,854 [INFO] Progress updated: Docker (Part 2) marked completed. Completion: 13.61%
+2026-07-28 21:10:05,854 [INFO] ============================================================
+2026-07-28 21:10:05,855 [INFO]             DEVOPS LEARNING PIPELINE DASHBOARD
+2026-07-28 21:10:05,855 [INFO] ============================================================
+2026-07-28 21:10:05,855 [INFO]  Completion Status: [====--------------------------] 13.61%
+2026-07-28 21:10:05,855 [INFO]  Completed Topics:  20 / 147
+2026-07-28 21:10:05,855 [INFO]  Next Topic Up:     Docker (Part 3)
+2026-07-28 21:10:05,855 [INFO] ------------------------------------------------------------
+2026-07-28 21:10:05,855 [INFO]  Last Studied:      Docker (Part 2)
+2026-07-28 21:10:05,855 [INFO] ============================================================
+2026-07-28 21:10:05,855 [INFO] Initiating automated email delivery to: ashusharma181996@gmail.com...
+2026-07-28 21:10:05,859 [INFO] Connecting to SMTP server: smtp.gmail.com:587...
+2026-07-28 21:10:05,983 [INFO] Performing SMTP login authentication...
+2026-07-28 21:10:06,156 [INFO] Transmitting email payload...
+2026-07-28 21:10:07,674 [INFO] Successfully delivered study guides to your mailbox.
+2026-07-28 21:10:07,674 [INFO] Initiating Git check-in for topic: Docker (Part 2) at root /home/runner/work/devops_learning_pipeline/devops_learning_pipeline
+2026-07-28 21:10:07,674 [INFO] Staging files...
