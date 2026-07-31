@@ -1645,3 +1645,274 @@ Please retry in 25.138506402s. [links {
 2026-07-28 21:10:07,674 [INFO] Successfully delivered study guides to your mailbox.
 2026-07-28 21:10:07,674 [INFO] Initiating Git check-in for topic: Docker (Part 2) at root /home/runner/work/devops_learning_pipeline/devops_learning_pipeline
 2026-07-28 21:10:07,674 [INFO] Staging files...
+2026-07-31 20:48:45,513 [INFO] Pipeline started processing topic: 'Docker' | Part: 3
+2026-07-31 20:48:45,513 [INFO] Ensuring folder structure...
+2026-07-31 20:48:45,513 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/docker/part3
+2026-07-31 20:48:45,513 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/docker/part3/presentation
+2026-07-31 20:48:45,513 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/docker/part3/pdf
+2026-07-31 20:48:45,514 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/docker/part3/assets/diagrams
+2026-07-31 20:48:45,514 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/docker/part3/notes
+2026-07-31 20:48:45,514 [INFO] Executing deep technical research for Docker Part 3...
+2026-07-31 20:48:45,514 [INFO] Initiating deep research for topic: Docker | Part: 3 using API: gemini
+2026-07-31 20:48:45,514 [INFO] Stage 1/3: Generating Study Guide for Part 3...
+2026-07-31 20:48:46,145 [INFO] Available models in catalog: ['models/gemini-3.5-flash', 'models/gemini-2.5-flash', 'models/gemini-2.0-flash', 'models/gemini-flash-latest']
+2026-07-31 20:48:46,145 [INFO] Selected model for attempt 1/3: models/gemini-3.5-flash
+2026-07-31 20:48:46,145 [INFO] Invoking model models/gemini-3.5-flash (attempt 1/3, temp=0.7)...
+2026-07-31 20:49:43,507 [WARNING] Attempt 1/3 with model models/gemini-3.5-flash failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.5-flash
+Please retry in 16.516138007s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 5
+}
+, retry_delay {
+  seconds: 16
+}
+]
+2026-07-31 20:49:43,507 [INFO] Selected model for attempt 2/3: models/gemini-2.5-flash
+2026-07-31 20:49:43,507 [INFO] Invoking model models/gemini-2.5-flash (attempt 2/3, temp=0.85)...
+2026-07-31 20:52:28,021 [INFO] Stage 2/3: Generating Interview Preparation Section (Q41 to Q50)...
+2026-07-31 20:52:28,221 [INFO] Available models in catalog: ['models/gemini-3.5-flash', 'models/gemini-2.5-flash', 'models/gemini-2.0-flash', 'models/gemini-flash-latest']
+2026-07-31 20:52:28,221 [INFO] Selected model for attempt 1/3: models/gemini-3.5-flash
+2026-07-31 20:52:28,221 [INFO] Invoking model models/gemini-3.5-flash (attempt 1/3, temp=0.7)...
+2026-07-31 20:54:26,206 [WARNING] Attempt 1/3 with model models/gemini-3.5-flash failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.5-flash
+Please retry in 33.808795967s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 5
+}
+, retry_delay {
+  seconds: 33
+}
+]
+2026-07-31 20:54:26,206 [INFO] Selected model for attempt 2/3: models/gemini-2.5-flash
+2026-07-31 20:54:26,206 [INFO] Invoking model models/gemini-2.5-flash (attempt 2/3, temp=0.85)...
+2026-07-31 20:57:27,862 [INFO] Stage 3/3: Generating structured PowerPoint outlines...
+2026-07-31 20:57:28,114 [INFO] Available models in catalog: ['models/gemini-3.5-flash', 'models/gemini-2.5-flash', 'models/gemini-2.0-flash', 'models/gemini-flash-latest']
+2026-07-31 20:57:28,114 [INFO] Selected model for attempt 1/3: models/gemini-3.5-flash
+2026-07-31 20:57:28,114 [INFO] Invoking model models/gemini-3.5-flash (attempt 1/3, temp=0.7)...
+2026-07-31 20:58:08,005 [WARNING] Attempt 1/3 with model models/gemini-3.5-flash failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.5-flash
+Please retry in 52.017178802s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 52
+}
+]
+2026-07-31 20:58:08,005 [INFO] Selected model for attempt 2/3: models/gemini-2.5-flash
+2026-07-31 20:58:08,005 [INFO] Invoking model models/gemini-2.5-flash (attempt 2/3, temp=0.85)...
+2026-07-31 20:58:37,728 [ERROR] Failed to parse LLM slide response as JSON: Extra data: line 73 column 1 (char 10456). Raw content: ```json
+[
+  {
+    "slide_number": 1,
+    "title": "Docker in Production: Mastering SRE, Diagnostics & Advanced Troubleshooting",
+    "subtitle": "Operational Excellence, Incident Response & Proactive Monitoring Strategies (Part 3/3)",
+    "layout": "title",
+    "bullets": [
+      "Transitioning from Development to Resilient, High-Availability Production Environments.",
+      "Deep Dive into Site Reliability Engineering (SRE) Principles for Containerized Workloads.",
+      "Architectural Strategies for Comprehensive Observability and Incident Management.",
+      "Empowering Teams with Proactive Monitoring, Diagnostics, and Rapid Recovery Techniques."
+    ],
+    "takeaway": "This session equips experienced professionals with advanced strategies for operating Docker at scale, ensuring stability, rapid recovery, and continuous operational improvement.",
+    "notes": "Good morning/afternoon everyone, and welcome to Part 3 of our Docker technical workshop. Having covered the fundamentals in Part 1 and orchestration in Part 2, today we shift our focus entirely to the critical aspects of running Docker in a production environment. This isn't just about deploying containers; it's about making them resilient, observable, and recoverable under stress. We'll explore SRE methodologies, advanced troubleshooting techniques, and how to build a robust incident response framework around your Dockerized applications. Our goal is to move from 'how to run' to 'how to run reliably, securely, and recover rapidly from unforeseen challenges.'"
+  },
+  {
+    "slide_number": 2,
+    "title": "Foundations of Production SRE for Docker",
+    "subtitle": "Architectural Pillars for Observability and Operational Resilience",
+    "layout": "content",
+    "bullets": [
+      "**Comprehensive Observability Stack:** Integrate centralized logging (e.g., ELK, Loki), distributed tracing (e.g., Jaeger, OpenTelemetry), and robust metrics collection (e.g., Prometheus, Grafana) across Docker hosts and containers.",
+      "**Resilient Workload Design:** Differentiate between stateless and stateful container patterns; implement robust data persistence strategies (e.g., bind mounts, Docker volumes, external storage solutions) and backup/restore mechanisms for stateful services.",
+      "**Container Runtime Diagnostics Architecture:** Establish systematic collection of Docker daemon logs, container events (`docker events`), resource usage (`docker stats`), and configuration details (`docker inspect`) for real-time and historical analysis.",
+      "**Service Mesh Integration for Enhanced Control:** Leverage solutions like Istio or Linkerd to introduce advanced traffic management, policy enforcement, encrypted communication, and rich telemetry for inter-service communication within your container ecosystem."
+    ],
+    "takeaway": "A successful SRE architecture for Docker demands a holistic and integrated approach to observability, intelligent state management, and deep runtime insights, enabling proactive issue detection.",
+    "notes": "Building a resilient production environment starts with strong architectural foundations. Our first pillar is a truly comprehensive observability stack. For Docker, this means not just application logs, but also host-level metrics, Docker daemon health, and container-specific resource usage. We must also design for resilience from the ground up, particularly distinguishing between stateless and stateful workloads and ensuring data integrity and recoverability for the latter. Understanding the internal workings of Docker at runtime is crucial, so we'll discuss how to systematically gather diagnostic data. Finally, for complex microservice architectures, a service mesh becomes an invaluable tool for adding sophisticated control and visibility over container-to-container communication, enhancing both security and operational insights."
+  },
+  {
+    "slide_number": 3,
+    "title": "Securing Production Docker Environments",
+    "subtitle": "Proactive Hardening & DevSecOps for Operational Integrity",
+    "layout": "content",
+    "bullets": [
+      "**Runtime Security Enforcement:** Implement granular security profiles using AppArmor/SELinux, seccomp filters, and user namespaces to significantly reduce the attack surface of running containers and isolate processes.",
+      "**Image Supply Chain Security:** Integrate automated vulnerability scanning (e.g., Trivy, Clair) into CI/CD pipelines, enforce digital signing of trusted images, and maintain strict immutability from registry to deployment.",
+      "**Robust Secrets Management:** Utilize dedicated secrets management solutions (e.g., HashiCorp Vault, AWS Secrets Manager, Kubernetes Secrets) and integrate them securely with Dockerized applications, avoiding hardcoded credentials.",
+      "**Network Segmentation and Policy:** Design and enforce least-privilege networking using container network policies (e.g., Calico, Weave Net) to control container-to-container and host-to-container communication, minimizing lateral movement risks."
+    ],
+    "takeaway": "Integrating security from the earliest design phases through continuous runtime enforcement is paramount for maintaining the integrity, compliance, and resilience of production Docker systems against evolving threats.",
+    "notes": "Security isn't an afterthought; it's an intrinsic part of SRE. For Docker in production, this means layering multiple security controls. We begin at runtime, locking down containers with advanced OS-level features. Next, we secure our entire image supply chain, from development to deployment, ensuring that only verified and scanned images reach production. Managing secrets effectively is non-negotiable – no hardcoding. Finally, network segmentation is crucial to prevent unauthorized access and limit the blast radius of any compromise. By embracing a DevSecOps mindset, we embed these practices throughout the lifecycle, making security an enabler, not a blocker, for operational excellence."
+  },
+  {
+    "slide_number": 4,
+    "title": "SRE in Action: Incident Response & Advanced Troubleshooting",
+    "subtitle": "From Alerts to Resolution: Strategies for Dockerized Systems",
+    "layout": "content",
+    "bullets": [
+      "**Custom Prometheus Alerting Rules:** Define SLO-driven alerts for critical Docker and application metrics (e.g., container CPU/memory saturation, high error rates, OOM kills, `docker_daemon_health_check_failures_total`) with clear thresholds and notification channels.",
+      "**Structured Incident Runbooks & Playbooks:** Develop actionable, step-by-step guides for common Docker-related incidents (e.g., sudden container restarts, disk full on host, network latency issues, registry pull failures), outlining diagnostic commands and resolution paths.",
+      "**Blameless RCA & Post-Mortem Culture:** Foster an environment for blameless post-mortems on Docker incidents to identify root causes, systemic weaknesses, and implement preventative measures, driving continuous improvement in reliability.",
+      "**Advanced Diagnostics Techniques:** Master tools like `docker logs`, `docker exec` for shell access, `docker top`, `strace`, `perf`, and `tcpdump` (when secured and available) to debug complex application and kernel-level issues within containers or on the host."
+    ],
+    "takeaway": "Effective SRE for Docker involves proactive, intelligent alerting, a well-defined incident response framework, a culture of continuous learning from failures, and mastery of advanced diagnostic tools.",
+    "notes": "This slide is the core of our discussion today – putting SRE into practice. It starts with intelligence: crafting custom Prometheus alerts that are truly actionable and tied to our SLOs, not just noisy thresholds. When an alert fires, we need a clear, pre-defined path to resolution, which is where structured runbooks come in. Post-incident, a blameless Root Cause Analysis (RCA) is vital to learn and prevent recurrence. This continuous feedback loop is what makes SRE powerful. Finally, when facing complex issues, we need to go beyond basic `docker logs` and leverage advanced Linux troubleshooting tools, sometimes even from within the container itself, to pinpoint and resolve deep-seated problems."
+  },
+  {
+    "slide_number": 5,
+    "title": "6-Month Mastery Roadmap: Operationalizing Docker Excellence",
+    "subtitle": "A Strategic Path to Advanced SRE & Production Readiness",
+    "layout": "content",
+    "bullets": [
+      "**Months 1-2: Observability Foundation & Baselining:** Implement a unified logging, metrics, and tracing stack. Instrument Docker hosts and all key applications. Establish initial SLIs/SLOs and baseline performance metrics for critical services.",
+      "**Months 3-4: Hardening & Security Integration:** Conduct thorough container image security audits. Integrate automated vulnerability scanning into CI/CD. Implement runtime security policies (e.g., AppArmor). Deploy robust secrets management for all production workloads.",
+      "**Months 5-6: Incident Response & Automation Maturity:** Draft and rigorously test incident runbooks for the top 5-10 common Docker-related failures. Develop and refine custom Prometheus alerting rules. Conduct 'Game Day' simulations and establish a blameless RCA process.",
+      "**Continuous Improvement & Iteration:** Regularly review and update runbooks, refine alerts based on incident data, and incorporate post-mortem learnings back into architectural design, security policies, and SRE practices."
+    ],
+    "takeaway": "Achieving mastery in operationalizing Docker requires a structured, iterative roadmap focusing on observability, security, incident preparedness, and a commitment to continuous improvement.",
+    "notes": "Mastering Docker in production is not a destination but an ongoing journey. This 6-month roadmap provides a structured path. We start by building a solid foundation of observability, understanding what 'normal' looks like. Then, we layer on security, making our environments resilient to attacks. The latter half focuses on proactive incident response – anticipating failures, practicing recovery, and learning from every event. Remember, this isn't a one-and-done; the final bullet emphasizes the crucial cycle of continuous improvement. By following this roadmap, you can transform your Docker operations from reactive to proactive, building highly reliable and secure systems."
+  }
+]
+```
+```json
+[
+  {
+    "slide_number": 1,
+    "title": "Docker in Production: Mastering SRE, Diagnostics & Advanced Troubleshooting",
+    "subtitle": "Operational Excellence, Incident Response & Proactive Monitoring Strategies (Part 3/3)",
+    "layout": "title",
+    "bullets": [
+      "Transitioning from Development to Resilient, High-Availability Production Environments.",
+      "Deep Dive into Site Reliability Engineering (SRE) Principles for Containerized Workloads.",
+      "Architectural Strategies for Comprehensive Observability and Incident Management.",
+      "Empowering Teams with Proactive Monitoring, Diagnostics, and Rapid Recovery Techniques."
+    ],
+    "takeaway": "This session equips experienced professionals with advanced strategies for operating Docker at scale, ensuring stability, rapid recovery, and continuous operational improvement.",
+    "notes": "Good morning/afternoon everyone, and welcome to Part 3 of our Docker technical workshop. Having covered the fundamentals in Part 1 and orchestration in Part 2, today we shift our focus entirely to the critical aspects of running Docker in a production environment. This isn't just about deploying containers; it's about making them resilient, observable, and recoverable under stress. We'll explore SRE methodologies, advanced troubleshooting techniques, and how to build a robust incident response framework around your Dockerized applications. Our goal is to move from 'how to run' to 'how to run reliably, securely, and recover rapidly from unforeseen challenges.'"
+  },
+  {
+    "slide_number": 2,
+    "title": "Foundations of Production SRE for Docker",
+    "subtitle": "Architectural Pillars for Observability and Operational Resilience",
+    "layout": "content",
+    "bullets": [
+      "**Comprehensive Observability Stack:** Integrate centralized logging (e.g., ELK, Loki), distributed tracing (e.g., Jaeger, OpenTelemetry), and robust metrics collection (e.g., Prometheus, Grafana) across Docker hosts and containers.",
+      "**Resilient Workload Design:** Differentiate between stateless and stateful container patterns; implement robust data persistence strategies (e.g., bind mounts, Docker volumes, external storage solutions) and backup/restore mechanisms for stateful services.",
+      "**Container Runtime Diagnostics Architecture:** Establish systematic collection of Docker daemon logs, container events (`docker events`), resource usage (`docker stats`), and configuration details (`docker inspect`) for real-time and historical analysis.",
+      "**Service Mesh Integration for Enhanced Control:** Leverage solutions like Istio or Linkerd to introduce advanced traffic management, policy enforcement, encrypted communication, and rich telemetry for inter-service communication within your container ecosystem."
+    ],
+    "takeaway": "A successful SRE architecture for Docker demands a holistic and integrated approach to observability, intelligent state management, and deep runtime insights, enabling proactive issue detection.",
+    "notes": "Building a resilient production environment starts with strong architectural foundations. Our first pillar is a truly comprehensive observability stack. For Docker, this means not just application logs, but also host-level metrics, Docker daemon health, and container-specific resource usage. We must also design for resilience from the ground up, particularly distinguishing between stateless and stateful workloads and ensuring data integrity and recoverability for the latter. Understanding the internal workings of Docker at runtime is crucial, so we'll discuss how to systematically gather diagnostic data. Finally, for complex microservice architectures, a service mesh becomes an invaluable tool for adding sophisticated control and visibility over container-to-container communication, enhancing both security and operational insights."
+  },
+  {
+    "slide_number": 3,
+    "title": "Securing Production Docker Environments",
+    "subtitle": "Proactive Hardening & DevSecOps for Operational Integrity",
+    "layout": "content",
+    "bullets": [
+      "**Runtime Security Enforcement:** Implement granular security profiles using AppArmor/SELinux, seccomp filters, and user namespaces to significantly reduce the attack surface of running containers and isolate processes.",
+      "**Image Supply Chain Security:** Integrate automated vulnerability scanning (e.g., Trivy, Clair) into CI/CD pipelines, enforce digital signing of trusted images, and maintain strict immutability from registry to deployment.",
+      "**Robust Secrets Management:** Utilize dedicated secrets management solutions (e.g., HashiCorp Vault, AWS Secrets Manager, Kubernetes Secrets) and integrate them securely with Dockerized applications, avoiding hardcoded credentials.",
+      "**Network Segmentation and Policy:** Design and enforce least-privilege networking using container network policies (e.g., Calico, Weave Net) to control container-to-container and host-to-container communication, minimizing lateral movement risks."
+    ],
+    "takeaway": "Integrating security from the earliest design phases through continuous runtime enforcement is paramount for maintaining the integrity, compliance, and resilience of production Docker systems against evolving threats.",
+    "notes": "Security isn't an afterthought; it's an intrinsic part of SRE. For Docker in production, this means layering multiple security controls. We begin at runtime, locking down containers with advanced OS-level features. Next, we secure our entire image supply chain, from development to deployment, ensuring that only verified and scanned images reach production. Managing secrets effectively is non-negotiable – no hardcoding. Finally, network segmentation is crucial to prevent unauthorized access and limit the blast radius of any compromise. By embracing a DevSecOps mindset, we embed these practices throughout the lifecycle, making security an enabler, not a blocker, for operational excellence."
+  },
+  {
+    "slide_number": 4,
+    "title": "SRE in Action: Incident Response & Advanced Troubleshooting",
+    "subtitle": "From Alerts to Resolution: Strategies for Dockerized Systems",
+    "layout": "content",
+    "bullets": [
+      "**Custom Prometheus Alerting Rules:** Define SLO-driven alerts for critical Docker and application metrics (e.g., container CPU/memory saturation, high error rates, OOM kills, `docker_daemon_health_check_failures_total`) with clear thresholds and notification channels.",
+      "**Structured Incident Runbooks & Playbooks:** Develop actionable, step-by-step guides for common Docker-related incidents (e.g., sudden container restarts, disk full on host, network latency issues, registry pull failures), outlining diagnostic commands and resolution paths.",
+      "**Blameless RCA & Post-Mortem Culture:** Foster an environment for blameless post-mortems on Docker incidents to identify root causes, systemic weaknesses, and implement preventative measures, driving continuous improvement in reliability.",
+      "**Advanced Diagnostics Techniques:** Master tools like `docker logs`, `docker exec` for shell access, `docker top`, `strace`, `perf`, and `tcpdump` (when secured and available) to debug complex application and kernel-level issues within containers or on the host."
+    ],
+    "takeaway": "Effective SRE for Docker involves proactive, intelligent alerting, a well-defined incident response framework, a culture of continuous learning from failures, and mastery of advanced diagnostic tools.",
+    "notes": "This slide is the core of our discussion today – putting SRE into practice. It starts with intelligence: crafting custom Prometheus alerts that are truly actionable and tied to our SLOs, not just noisy thresholds. When an alert fires, we need a clear, pre-defined path to resolution, which is where structured runbooks come in. Post-incident, a blameless Root Cause Analysis (RCA) is vital to learn and prevent recurrence. This continuous feedback loop is what makes SRE powerful. Finally, when facing complex issues, we need to go beyond basic `docker logs` and leverage advanced Linux troubleshooting tools, sometimes even from within the container itself, to pinpoint and resolve deep-seated problems."
+  },
+  {
+    "slide_number": 5,
+    "title": "6-Month Mastery Roadmap: Operationalizing Docker Excellence",
+    "subtitle": "A Strategic Path to Advanced SRE & Production Readiness",
+    "layout": "content",
+    "bullets": [
+      "**Months 1-2: Observability Foundation & Baselining:** Implement a unified logging, metrics, and tracing stack. Instrument Docker hosts and all key applications. Establish initial SLIs/SLOs and baseline performance metrics for critical services.",
+      "**Months 3-4: Hardening & Security Integration:** Conduct thorough container image security audits. Integrate automated vulnerability scanning into CI/CD. Implement runtime security policies (e.g., AppArmor). Deploy robust secrets management for all production workloads.",
+      "**Months 5-6: Incident Response & Automation Maturity:** Draft and rigorously test incident runbooks for the top 5-10 common Docker-related failures. Develop and refine custom Prometheus alerting rules. Conduct 'Game Day' simulations and establish a blameless RCA process.",
+      "**Continuous Improvement & Iteration:** Regularly review and update runbooks, refine alerts based on incident data, and incorporate post-mortem learnings back into architectural design, security policies, and SRE practices."
+    ],
+    "takeaway": "Achieving mastery in operationalizing Docker requires a structured, iterative roadmap focusing on observability, security, incident preparedness, and a commitment to continuous improvement.",
+    "notes": "Mastering Docker in production is not a destination but an ongoing journey. This 6-month roadmap provides a structured path. We start by building a solid foundation of observability, understanding what 'normal' looks like. Then, we layer on security, making our environments resilient to attacks. The latter half focuses on proactive incident response – anticipating failures, practicing recovery, and learning from every event. Remember, this isn't a one-and-done; the final bullet emphasizes the crucial cycle of continuous improvement. By following this roadmap, you can transform your Docker operations from reactive to proactive, building highly reliable and secure systems."
+  }
+]
+```
+2026-07-31 20:58:37,728 [INFO] Generating mock research data for topic: Docker | Part: 3
+2026-07-31 20:58:37,728 [INFO] Writing study guide and notes...
+2026-07-31 20:58:37,729 [INFO] Generating PPTX for 'Docker - Part 3' using python-pptx...
+2026-07-31 20:58:37,802 [INFO] Successfully generated beautiful presentation at: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/docker/part3/presentation/docker-part3.pptx
+2026-07-31 20:58:37,802 [INFO] Compiling PDF for topic 'Docker - Part 3' using fpdf2...
+2026-07-31 20:58:39,339 [INFO] Successfully generated beautiful PDF guide at: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/docker/part3/pdf/docker-part3.pdf
+2026-07-31 20:58:39,339 [INFO] Pruning old study manuals and presentations from workspace...
+2026-07-31 20:58:39,341 [INFO] Deleted old asset: docker/part2/pdf/docker-part2.pdf
+2026-07-31 20:58:39,343 [INFO] Deleted old asset: docker/part2/presentation/docker-part2.pptx
+2026-07-31 20:58:39,345 [INFO] Writing metadata.json records...
+2026-07-31 20:58:39,345 [INFO] Progress updated: Docker (Part 3) marked completed. Completion: 14.29%
+2026-07-31 20:58:39,345 [INFO] ============================================================
+2026-07-31 20:58:39,345 [INFO]             DEVOPS LEARNING PIPELINE DASHBOARD
+2026-07-31 20:58:39,345 [INFO] ============================================================
+2026-07-31 20:58:39,345 [INFO]  Completion Status: [====--------------------------] 14.29%
+2026-07-31 20:58:39,346 [INFO]  Completed Topics:  21 / 147
+2026-07-31 20:58:39,346 [INFO]  Next Topic Up:     Kubernetes (Part 1)
+2026-07-31 20:58:39,346 [INFO] ------------------------------------------------------------
+2026-07-31 20:58:39,346 [INFO]  Last Studied:      Docker (Part 3)
+2026-07-31 20:58:39,346 [INFO] ============================================================
+2026-07-31 20:58:39,346 [INFO] Initiating automated email delivery to: ashusharma181996@gmail.com...
+2026-07-31 20:58:39,349 [INFO] Connecting to SMTP server: smtp.gmail.com:587...
+2026-07-31 20:58:39,436 [INFO] Performing SMTP login authentication...
+2026-07-31 20:58:39,548 [INFO] Transmitting email payload...
+2026-07-31 20:58:41,255 [INFO] Successfully delivered study guides to your mailbox.
+2026-07-31 20:58:41,255 [INFO] Initiating Git check-in for topic: Docker (Part 3) at root /home/runner/work/devops_learning_pipeline/devops_learning_pipeline
+2026-07-31 20:58:41,255 [INFO] Staging files...
