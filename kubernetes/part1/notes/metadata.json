@@ -1,0 +1,12 @@
+{
+  "topic": "Kubernetes",
+  "part": 1,
+  "generated_at": "2026-08-04T21:15:03.258126",
+  "dry_run": false,
+  "engine": "gemini",
+  "files": {
+    "notes": "/kubernetes/part1/notes/summary.md",
+    "pdf": "/kubernetes/part1/pdf/kubernetes-part1.pdf",
+    "presentation": "/kubernetes/part1/presentation/kubernetes-part1.pptx"
+  }
+}
