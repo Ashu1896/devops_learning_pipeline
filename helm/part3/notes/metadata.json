@@ -1,0 +1,12 @@
+{
+  "topic": "Helm",
+  "part": 3,
+  "generated_at": "2026-08-21T20:11:30.260380",
+  "dry_run": false,
+  "engine": "gemini",
+  "files": {
+    "notes": "/helm/part3/notes/summary.md",
+    "pdf": "/helm/part3/pdf/helm-part3.pdf",
+    "presentation": "/helm/part3/presentation/helm-part3.pptx"
+  }
+}
