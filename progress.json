@@ -26,10 +26,10 @@
     "Kubernetes (Part 3)",
     "Helm (Part 1)",
     "Helm (Part 2)",
-    "Helm (Part 3)"
+    "Helm (Part 3)",
+    "Terraform (Part 1)"
   ],
   "pending": [
-    "Terraform (Part 1)",
     "Terraform (Part 2)",
     "Terraform (Part 3)",
     "Ansible (Part 1)",
@@ -150,8 +150,8 @@
     "Production deployment strategies (Part 2)",
     "Production deployment strategies (Part 3)"
   ],
-  "percentage": 18.37,
-  "last_run": "2026-08-21T20:11:30.260692",
+  "percentage": 19.05,
+  "last_run": "2026-08-25T20:19:10.346927",
   "history": [
     {
       "topic": "Linux (Part 1)",
@@ -260,6 +260,10 @@
     {
       "topic": "Helm (Part 3)",
       "timestamp": "2026-08-21T20:11:30.260692"
+    },
+    {
+      "topic": "Terraform (Part 1)",
+      "timestamp": "2026-08-25T20:19:10.346927"
     }
   ]
 }
