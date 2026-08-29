@@ -1,0 +1,12 @@
+{
+  "topic": "Terraform",
+  "part": 2,
+  "generated_at": "2026-08-29T02:34:05.945754",
+  "dry_run": false,
+  "engine": "gemini",
+  "files": {
+    "notes": "/terraform/part2/notes/summary.md",
+    "pdf": "/terraform/part2/pdf/terraform-part2.pdf",
+    "presentation": "/terraform/part2/presentation/terraform-part2.pptx"
+  }
+}
