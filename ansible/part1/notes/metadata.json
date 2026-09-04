@@ -1,0 +1,12 @@
+{
+  "topic": "Ansible",
+  "part": 1,
+  "generated_at": "2026-09-04T21:56:49.817829",
+  "dry_run": false,
+  "engine": "gemini",
+  "files": {
+    "notes": "/ansible/part1/notes/summary.md",
+    "pdf": "/ansible/part1/pdf/ansible-part1.pdf",
+    "presentation": "/ansible/part1/presentation/ansible-part1.pptx"
+  }
+}
