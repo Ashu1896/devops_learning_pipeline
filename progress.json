@@ -30,10 +30,10 @@
     "Terraform (Part 1)",
     "Terraform (Part 2)",
     "Terraform (Part 3)",
-    "Ansible (Part 1)"
+    "Ansible (Part 1)",
+    "Ansible (Part 2)"
   ],
   "pending": [
-    "Ansible (Part 2)",
     "Ansible (Part 3)",
     "AWS (Part 1)",
     "AWS (Part 2)",
@@ -150,8 +150,8 @@
     "Production deployment strategies (Part 2)",
     "Production deployment strategies (Part 3)"
   ],
-  "percentage": 21.09,
-  "last_run": "2026-09-04T21:56:49.818129",
+  "percentage": 21.77,
+  "last_run": "2026-09-08T22:06:05.156018",
   "history": [
     {
       "topic": "Linux (Part 1)",
@@ -276,6 +276,10 @@
     {
       "topic": "Ansible (Part 1)",
       "timestamp": "2026-09-04T21:56:49.818129"
+    },
+    {
+      "topic": "Ansible (Part 2)",
+      "timestamp": "2026-09-08T22:06:05.156018"
     }
   ]
 }
