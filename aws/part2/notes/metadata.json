@@ -1,0 +1,12 @@
+{
+  "topic": "AWS",
+  "part": 2,
+  "generated_at": "2026-09-18T22:16:23.516113",
+  "dry_run": false,
+  "engine": "gemini",
+  "files": {
+    "notes": "/aws/part2/notes/summary.md",
+    "pdf": "/aws/part2/pdf/aws-part2.pdf",
+    "presentation": "/aws/part2/presentation/aws-part2.pptx"
+  }
+}

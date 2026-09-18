@@ -2655,3 +2655,125 @@ Please retry in 10.256280667s. [links {
 2026-09-15 22:31:31,851 [INFO] Successfully delivered study guides to your mailbox.
 2026-09-15 22:31:31,851 [INFO] Initiating Git check-in for topic: AWS (Part 1) at root /home/runner/work/devops_learning_pipeline/devops_learning_pipeline
 2026-09-15 22:31:31,851 [INFO] Staging files...
+2026-09-18 21:57:40,245 [INFO] Pipeline started processing topic: 'AWS' | Part: 2
+2026-09-18 21:57:40,245 [INFO] Ensuring folder structure...
+2026-09-18 21:57:40,246 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/aws/part2
+2026-09-18 21:57:40,246 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/aws/part2/presentation
+2026-09-18 21:57:40,246 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/aws/part2/pdf
+2026-09-18 21:57:40,246 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/aws/part2/assets/diagrams
+2026-09-18 21:57:40,246 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/aws/part2/notes
+2026-09-18 21:57:40,246 [INFO] Executing deep technical research for AWS Part 2...
+2026-09-18 21:57:40,246 [INFO] Initiating deep research for topic: AWS | Part: 2 using API: gemini
+2026-09-18 21:57:40,246 [INFO] Stage 1/3: Generating Study Guide for Part 2...
+2026-09-18 21:57:40,778 [INFO] Available models in catalog: ['models/gemini-3.5-flash', 'models/gemini-2.5-flash', 'models/gemini-flash-latest']
+2026-09-18 21:57:40,778 [INFO] Selected model for attempt 1/3: models/gemini-3.5-flash
+2026-09-18 21:57:40,778 [INFO] Invoking model models/gemini-3.5-flash (attempt 1/3, temp=0.7)...
+2026-09-18 21:58:21,535 [WARNING] Attempt 1/3 with model models/gemini-3.5-flash failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.5-flash
+Please retry in 38.47983622s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 5
+}
+, retry_delay {
+  seconds: 38
+}
+]
+2026-09-18 21:58:21,535 [INFO] Selected model for attempt 2/3: models/gemini-2.5-flash
+2026-09-18 21:58:21,535 [INFO] Invoking model models/gemini-2.5-flash (attempt 2/3, temp=0.85)...
+2026-09-18 22:04:25,224 [INFO] Stage 2/3: Generating Interview Preparation Section (Q21 to Q40)...
+2026-09-18 22:04:25,403 [INFO] Available models in catalog: ['models/gemini-3.5-flash', 'models/gemini-2.5-flash', 'models/gemini-flash-latest']
+2026-09-18 22:04:25,403 [INFO] Selected model for attempt 1/3: models/gemini-3.5-flash
+2026-09-18 22:04:25,403 [INFO] Invoking model models/gemini-3.5-flash (attempt 1/3, temp=0.7)...
+2026-09-18 22:12:57,632 [WARNING] Attempt 1/3 with model models/gemini-3.5-flash failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.5-flash
+Please retry in 2.384486154s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 2
+}
+]
+2026-09-18 22:12:57,632 [INFO] Selected model for attempt 2/3: models/gemini-2.5-flash
+2026-09-18 22:12:57,632 [INFO] Invoking model models/gemini-2.5-flash (attempt 2/3, temp=0.85)...
+2026-09-18 22:15:55,486 [INFO] Stage 3/3: Generating structured PowerPoint outlines...
+2026-09-18 22:15:55,703 [INFO] Available models in catalog: ['models/gemini-3.5-flash', 'models/gemini-2.5-flash', 'models/gemini-flash-latest']
+2026-09-18 22:15:55,704 [INFO] Selected model for attempt 1/3: models/gemini-3.5-flash
+2026-09-18 22:15:55,704 [INFO] Invoking model models/gemini-3.5-flash (attempt 1/3, temp=0.7)...
+2026-09-18 22:16:01,361 [WARNING] Attempt 1/3 with model models/gemini-3.5-flash failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.5-flash
+Please retry in 58.65369516s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 58
+}
+]
+2026-09-18 22:16:01,361 [INFO] Selected model for attempt 2/3: models/gemini-2.5-flash
+2026-09-18 22:16:01,361 [INFO] Invoking model models/gemini-2.5-flash (attempt 2/3, temp=0.85)...
+2026-09-18 22:16:21,280 [INFO] Writing study guide and notes...
+2026-09-18 22:16:21,280 [INFO] Generating PPTX for 'AWS - Part 2' using python-pptx...
+2026-09-18 22:16:21,332 [INFO] Successfully generated beautiful presentation at: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/aws/part2/presentation/aws-part2.pptx
+2026-09-18 22:16:21,332 [INFO] Compiling PDF for topic 'AWS - Part 2' using fpdf2...
+2026-09-18 22:16:23,509 [INFO] Successfully generated beautiful PDF guide at: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/aws/part2/pdf/aws-part2.pdf
+2026-09-18 22:16:23,509 [INFO] Pruning old study manuals and presentations from workspace...
+2026-09-18 22:16:23,512 [INFO] Deleted old asset: aws/part1/pdf/aws-part1.pdf
+2026-09-18 22:16:23,515 [INFO] Deleted old asset: aws/part1/presentation/aws-part1.pptx
+2026-09-18 22:16:23,516 [INFO] Writing metadata.json records...
+2026-09-18 22:16:23,516 [INFO] Progress updated: AWS (Part 2) marked completed. Completion: 23.81%
+2026-09-18 22:16:23,516 [INFO] ============================================================
+2026-09-18 22:16:23,516 [INFO]             DEVOPS LEARNING PIPELINE DASHBOARD
+2026-09-18 22:16:23,516 [INFO] ============================================================
+2026-09-18 22:16:23,517 [INFO]  Completion Status: [=======-----------------------] 23.81%
+2026-09-18 22:16:23,517 [INFO]  Completed Topics:  35 / 147
+2026-09-18 22:16:23,517 [INFO]  Next Topic Up:     AWS (Part 3)
+2026-09-18 22:16:23,517 [INFO] ------------------------------------------------------------
+2026-09-18 22:16:23,517 [INFO]  Last Studied:      AWS (Part 2)
+2026-09-18 22:16:23,517 [INFO] ============================================================
+2026-09-18 22:16:23,517 [INFO] Initiating automated email delivery to: ashusharma181996@gmail.com...
+2026-09-18 22:16:23,521 [INFO] Connecting to SMTP server: smtp.gmail.com:587...
+2026-09-18 22:16:23,590 [INFO] Performing SMTP login authentication...
+2026-09-18 22:16:23,744 [INFO] Transmitting email payload...
+2026-09-18 22:16:25,633 [INFO] Successfully delivered study guides to your mailbox.
+2026-09-18 22:16:25,633 [INFO] Initiating Git check-in for topic: AWS (Part 2) at root /home/runner/work/devops_learning_pipeline/devops_learning_pipeline
+2026-09-18 22:16:25,633 [INFO] Staging files...
