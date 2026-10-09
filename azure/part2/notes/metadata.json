@@ -1,0 +1,12 @@
+{
+  "topic": "Azure",
+  "part": 2,
+  "generated_at": "2026-10-09T23:40:39.476740",
+  "dry_run": false,
+  "engine": "gemini",
+  "files": {
+    "notes": "/azure/part2/notes/summary.md",
+    "pdf": "/azure/part2/pdf/azure-part2.pdf",
+    "presentation": "/azure/part2/presentation/azure-part2.pptx"
+  }
+}
