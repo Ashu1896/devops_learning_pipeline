@@ -2971,3 +2971,125 @@ Please retry in 17m36.069145544s. [links {
 2026-10-09 23:40:41,726 [INFO] Successfully delivered study guides to your mailbox.
 2026-10-09 23:40:41,726 [INFO] Initiating Git check-in for topic: Azure (Part 2) at root /home/runner/work/devops_learning_pipeline/devops_learning_pipeline
 2026-10-09 23:40:41,726 [INFO] Staging files...
+2026-10-13 23:27:20,698 [INFO] Pipeline started processing topic: 'Azure' | Part: 3
+2026-10-13 23:27:20,698 [INFO] Ensuring folder structure...
+2026-10-13 23:27:20,698 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/azure/part3
+2026-10-13 23:27:20,699 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/azure/part3/presentation
+2026-10-13 23:27:20,699 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/azure/part3/pdf
+2026-10-13 23:27:20,699 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/azure/part3/assets/diagrams
+2026-10-13 23:27:20,699 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/azure/part3/notes
+2026-10-13 23:27:20,699 [INFO] Executing deep technical research for Azure Part 3...
+2026-10-13 23:27:20,699 [INFO] Initiating deep research for topic: Azure | Part: 3 using API: gemini
+2026-10-13 23:27:20,699 [INFO] Stage 1/3: Generating Study Guide for Part 3...
+2026-10-13 23:27:21,285 [INFO] Available models in catalog: ['models/gemini-3.5-flash', 'models/gemini-2.5-flash', 'models/gemini-flash-latest']
+2026-10-13 23:27:21,285 [INFO] Selected model for attempt 1/3: models/gemini-3.5-flash
+2026-10-13 23:27:21,285 [INFO] Invoking model models/gemini-3.5-flash (attempt 1/3, temp=0.7)...
+2026-10-13 23:27:44,343 [WARNING] Attempt 1/3 with model models/gemini-3.5-flash failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.6-flash
+Please retry in 15.670689338s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.6-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 5
+}
+, retry_delay {
+  seconds: 15
+}
+]
+2026-10-13 23:27:44,343 [INFO] Selected model for attempt 2/3: models/gemini-2.5-flash
+2026-10-13 23:27:44,343 [INFO] Invoking model models/gemini-2.5-flash (attempt 2/3, temp=0.85)...
+2026-10-13 23:29:41,789 [INFO] Stage 2/3: Generating Interview Preparation Section (Q41 to Q50)...
+2026-10-13 23:29:42,001 [INFO] Available models in catalog: ['models/gemini-3.5-flash', 'models/gemini-2.5-flash', 'models/gemini-flash-latest']
+2026-10-13 23:29:42,001 [INFO] Selected model for attempt 1/3: models/gemini-3.5-flash
+2026-10-13 23:29:42,001 [INFO] Invoking model models/gemini-3.5-flash (attempt 1/3, temp=0.7)...
+2026-10-13 23:30:17,379 [WARNING] Attempt 1/3 with model models/gemini-3.5-flash failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.6-flash
+Please retry in 42.6341429s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.6-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 5
+}
+, retry_delay {
+  seconds: 42
+}
+]
+2026-10-13 23:30:17,379 [INFO] Selected model for attempt 2/3: models/gemini-2.5-flash
+2026-10-13 23:30:17,379 [INFO] Invoking model models/gemini-2.5-flash (attempt 2/3, temp=0.85)...
+2026-10-13 23:31:50,870 [INFO] Stage 3/3: Generating structured PowerPoint outlines...
+2026-10-13 23:31:51,040 [INFO] Available models in catalog: ['models/gemini-3.5-flash', 'models/gemini-2.5-flash', 'models/gemini-flash-latest']
+2026-10-13 23:31:51,040 [INFO] Selected model for attempt 1/3: models/gemini-3.5-flash
+2026-10-13 23:31:51,040 [INFO] Invoking model models/gemini-3.5-flash (attempt 1/3, temp=0.7)...
+2026-10-13 23:32:55,459 [WARNING] Attempt 1/3 with model models/gemini-3.5-flash failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash
+Please retry in 27m4.555093672s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.6-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 1624
+}
+]
+2026-10-13 23:32:55,459 [INFO] Selected model for attempt 2/3: models/gemini-2.5-flash
+2026-10-13 23:32:55,459 [INFO] Invoking model models/gemini-2.5-flash (attempt 2/3, temp=0.85)...
+2026-10-13 23:33:14,279 [INFO] Writing study guide and notes...
+2026-10-13 23:33:14,280 [INFO] Generating PPTX for 'Azure - Part 3' using python-pptx...
+2026-10-13 23:33:14,335 [INFO] Successfully generated beautiful presentation at: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/azure/part3/presentation/azure-part3.pptx
+2026-10-13 23:33:14,335 [INFO] Compiling PDF for topic 'Azure - Part 3' using fpdf2...
+2026-10-13 23:33:15,706 [INFO] Successfully generated beautiful PDF guide at: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/azure/part3/pdf/azure-part3.pdf
+2026-10-13 23:33:15,706 [INFO] Pruning old study manuals and presentations from workspace...
+2026-10-13 23:33:15,709 [INFO] Deleted old asset: azure/part2/pdf/azure-part2.pdf
+2026-10-13 23:33:15,712 [INFO] Deleted old asset: azure/part2/presentation/azure-part2.pptx
+2026-10-13 23:33:15,713 [INFO] Writing metadata.json records...
+2026-10-13 23:33:15,714 [INFO] Progress updated: Azure (Part 3) marked completed. Completion: 26.53%
+2026-10-13 23:33:15,714 [INFO] ============================================================
+2026-10-13 23:33:15,714 [INFO]             DEVOPS LEARNING PIPELINE DASHBOARD
+2026-10-13 23:33:15,714 [INFO] ============================================================
+2026-10-13 23:33:15,714 [INFO]  Completion Status: [========----------------------] 26.53%
+2026-10-13 23:33:15,714 [INFO]  Completed Topics:  39 / 147
+2026-10-13 23:33:15,715 [INFO]  Next Topic Up:     GCP (Part 1)
+2026-10-13 23:33:15,715 [INFO] ------------------------------------------------------------
+2026-10-13 23:33:15,715 [INFO]  Last Studied:      Azure (Part 3)
+2026-10-13 23:33:15,715 [INFO] ============================================================
+2026-10-13 23:33:15,715 [INFO] Initiating automated email delivery to: ashusharma181996@gmail.com...
+2026-10-13 23:33:15,718 [INFO] Connecting to SMTP server: smtp.gmail.com:587...
+2026-10-13 23:33:15,802 [INFO] Performing SMTP login authentication...
+2026-10-13 23:33:15,957 [INFO] Transmitting email payload...
+2026-10-13 23:33:18,701 [INFO] Successfully delivered study guides to your mailbox.
+2026-10-13 23:33:18,701 [INFO] Initiating Git check-in for topic: Azure (Part 3) at root /home/runner/work/devops_learning_pipeline/devops_learning_pipeline
+2026-10-13 23:33:18,702 [INFO] Staging files...
