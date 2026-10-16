@@ -38,10 +38,10 @@
     "AWS (Part 3)",
     "Azure (Part 1)",
     "Azure (Part 2)",
-    "Azure (Part 3)"
+    "Azure (Part 3)",
+    "GCP (Part 1)"
   ],
   "pending": [
-    "GCP (Part 1)",
     "GCP (Part 2)",
     "GCP (Part 3)",
     "Python for DevOps (Part 1)",
@@ -150,8 +150,8 @@
     "Production deployment strategies (Part 2)",
     "Production deployment strategies (Part 3)"
   ],
-  "percentage": 26.53,
-  "last_run": "2026-10-13T23:33:15.714098",
+  "percentage": 27.21,
+  "last_run": "2026-10-16T22:18:04.850872",
   "history": [
     {
       "topic": "Linux (Part 1)",
@@ -308,6 +308,10 @@
     {
       "topic": "Azure (Part 3)",
       "timestamp": "2026-10-13T23:33:15.714098"
+    },
+    {
+      "topic": "GCP (Part 1)",
+      "timestamp": "2026-10-16T22:18:04.850872"
     }
   ]
 }
