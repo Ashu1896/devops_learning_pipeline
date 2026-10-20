@@ -1,0 +1,12 @@
+{
+  "topic": "GCP",
+  "part": 2,
+  "generated_at": "2026-10-20T22:53:08.027030",
+  "dry_run": false,
+  "engine": "gemini",
+  "files": {
+    "notes": "/gcp/part2/notes/summary.md",
+    "pdf": "/gcp/part2/pdf/gcp-part2.pdf",
+    "presentation": "/gcp/part2/presentation/gcp-part2.pptx"
+  }
+}
