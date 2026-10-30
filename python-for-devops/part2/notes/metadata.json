@@ -1,0 +1,12 @@
+{
+  "topic": "Python for DevOps",
+  "part": 2,
+  "generated_at": "2026-10-30T23:23:08.161508",
+  "dry_run": false,
+  "engine": "gemini",
+  "files": {
+    "notes": "/python-for-devops/part2/notes/summary.md",
+    "pdf": "/python-for-devops/part2/pdf/python-for-devops-part2.pdf",
+    "presentation": "/python-for-devops/part2/presentation/python-for-devops-part2.pptx"
+  }
+}
