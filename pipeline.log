@@ -3328,3 +3328,118 @@ Please retry in 27m4.555093672s. [links {
 2026-10-30 23:23:12,103 [INFO] Successfully delivered study guides to your mailbox.
 2026-10-30 23:23:12,103 [INFO] Initiating Git check-in for topic: Python for DevOps (Part 2) at root /home/runner/work/devops_learning_pipeline/devops_learning_pipeline
 2026-10-30 23:23:12,103 [INFO] Staging files...
+2026-11-04 00:13:39,060 [INFO] Pipeline started processing topic: 'Python for DevOps' | Part: 3
+2026-11-04 00:13:39,060 [INFO] Ensuring folder structure...
+2026-11-04 00:13:39,061 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/python-for-devops/part3
+2026-11-04 00:13:39,061 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/python-for-devops/part3/presentation
+2026-11-04 00:13:39,061 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/python-for-devops/part3/pdf
+2026-11-04 00:13:39,061 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/python-for-devops/part3/assets/diagrams
+2026-11-04 00:13:39,061 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/python-for-devops/part3/notes
+2026-11-04 00:13:39,061 [INFO] Executing deep technical research for Python for DevOps Part 3...
+2026-11-04 00:13:39,061 [INFO] Initiating deep research for topic: Python for DevOps | Part: 3 using API: gemini
+2026-11-04 00:13:39,061 [INFO] Stage 1/3: Generating Study Guide for Part 3...
+2026-11-04 00:13:39,945 [INFO] Available models in catalog: ['models/gemini-3.5-flash', 'models/gemini-2.5-flash', 'models/gemini-flash-latest']
+2026-11-04 00:13:39,945 [INFO] Selected model for attempt 1/3: models/gemini-3.5-flash
+2026-11-04 00:13:39,946 [INFO] Invoking model models/gemini-3.5-flash (attempt 1/3, temp=0.7)...
+2026-11-04 00:14:56,561 [INFO] Stage 2/3: Generating Interview Preparation Section (Q41 to Q50)...
+2026-11-04 00:14:56,783 [INFO] Available models in catalog: ['models/gemini-3.5-flash', 'models/gemini-2.5-flash', 'models/gemini-flash-latest']
+2026-11-04 00:14:56,783 [INFO] Selected model for attempt 1/3: models/gemini-3.5-flash
+2026-11-04 00:14:56,783 [INFO] Invoking model models/gemini-3.5-flash (attempt 1/3, temp=0.7)...
+2026-11-04 00:17:37,699 [INFO] Stage 3/3: Generating structured PowerPoint outlines...
+2026-11-04 00:17:37,916 [INFO] Available models in catalog: ['models/gemini-3.5-flash', 'models/gemini-2.5-flash', 'models/gemini-flash-latest']
+2026-11-04 00:17:37,916 [INFO] Selected model for attempt 1/3: models/gemini-3.5-flash
+2026-11-04 00:17:37,916 [INFO] Invoking model models/gemini-3.5-flash (attempt 1/3, temp=0.7)...
+2026-11-04 00:18:59,145 [ERROR] Failed to parse LLM slide response as JSON: Expecting ',' delimiter: line 67 column 1 (char 6432). Raw content: [
+  {
+    "slide_number": 1,
+    "title": "Enterprise Python for DevOps & SRE: Advanced Diagnostics & Incident Automation",
+    "subtitle": "Production SRE Strategy: Engineering Resilient Diagnostics, Custom Prometheus Rules, and Automated Incident Runbooks (Part 3/3)",
+    "layout": "title",
+    "bullets": [
+      "Building Production-Grade SRE Tools: Translating manual triage workflows into robust, self-healing Python diagnostics and automation engines.",
+      "Advanced Observability Integration: Programmatic Prometheus alert processing, dynamic rule generation, and low-overhead custom metric exporters.",
+      "Automated Incident Lifecycle Management: Codifying Post-Mortems, RCA forensic collection, and self-remediating execution runbooks."
+    ],
+    "takeaway": "Operationalizing Python as a first-class reliability engineering language elevates incident response from reactive firefighting to deterministic, automated self-healing.",
+    "notes": "Welcome to Part 3 of our Python for DevOps series. Today we focus on senior SRE concerns: deep diagnostics, programmatically managed Prometheus observability, runtime safety, and automated incident triage runbooks."
+  },
+  {
+    "slide_number": 2,
+    "title": "Diagnostic Engine Architecture & Custom Prometheus Observability",
+    "subtitle": "Decoupling Incident Telemetry, Dynamic Alert Rule Generation, and Custom Metric Exporters",
+    "layout": "architecture_overview",
+    "bullets": [
+      "Dynamic Alert Rule Synthesis: Utilizing Python (Jinja2 & PyYAML) to programmatically compile validated Prometheus alerting rules with strict SLAs and enterprise metadata from GitOps manifests.",
+      "High-Performance Diagnostic Engines: Implementing asynchronous telemetry collectors via asyncio and aiohttp to inspect thread dumps, memory leaks, and socket exhaustion across distributed node clusters.",
+      "Custom Telemetry Exporters: Exposing application-level diagnostic vectors via the official prometheus_client SDK utilizing low-overhead histogram quantiles and atomic counters."
+    ],
+    "takeaway": "Modular SRE Python architecture must separate metric ingestion, dynamic rule compilation, and real-time diagnostic execution to minimize observer overhead and monitor drift.",
+    "notes": "Emphasize how Python acts as the operational middleware. Dynamic rule synthesis prevents drift between actual infrastructure state and Prometheus alert configurations, while async diagnostic engines collect deep operational context during incidents without bogging down nodes."
+  },
+  {
+    "slide_number": 3,
+    "title": "Securing SRE Automation, Runtime Diagnostics & Execution Safety",
+    "subtitle": "DevSecOps Guardrails for High-Privilege Diagnostic and Remediation Scripts",
+    "layout": "two_column",
+    "bullets": [
+      "Zero-Trust Remediation Privilege Controls: Enforcing tight RBAC, scoped Kubernetes Service Accounts, and short-lived OAuth2 tokens during automated runbook execution.",
+      "Sanitization of Diagnostic Telemetry: Programmatically stripping PII/PHI, secret keys, and authorization headers from memory dumps and log streams before storage.",
+      "Fail-Safe Self-Healing Guardrails: Implementing circuit breakers, execution velocity limits, and mandatory human-in-the-loop approvals for high-blast-radius automated actions."
+    ],
+    "takeaway": "SRE automation scripts run with elevated production privileges; security controls, telemetry sanitization, and rate-limiting circuit breakers are non-negotiable safety requirements.",
+    "notes": "Highlight the risks inherent to self-healing automation. SRE tooling frequently needs cluster-admin or root privileges. Without strict sanitization, telemetry logs leak credentials, and without velocity limits, broken remediation scripts can turn localized micro-outages into global incidents."
+  },
+  {
+    "slide_number": 4,
+    "title": "Automated Incident Runbooks & Dynamic Root Cause Analysis (RCA)",
+    "subtitle": "Bridging Alertmanager Webhooks with Programmatic Triage and Forensic Capture Engines",
+    "layout": "incident_workflow",
+    "bullets": [
+      "Webhook Telemetry Ingestion: Building high-throughput Python API endpoints (FastAPI) to ingest Alertmanager webhook alerts and instantaneously launch context-aware diagnostic snapshots.",
+      "Automated Forensic Capture: Instant snapshotting of pod logs, eBPF network traces, and heap dumps prior to automated pod cycling, node draining, or service restarts.",
+      "Codified Post-Mortem Generation: Auto-assembling structured Markdown/JSON incident chronologies and metric timelines, posting artifacts directly to PagerDuty and Jira incident rooms."
+    ],
+    "takeaway": "Automating post-alert forensic capture ensures transient diagnostic data is preserved prior to system auto-healing, enabling definitive Root Cause Analysis (RCA).",
+    "notes": "Address a massive SRE pain point: lost ephemeral diagnostic state caused by auto-restarts or auto-scaling. Python scripts should intercept the initial alert, freeze forensic evidence (heap dumps, eBPF state), attach context to incident tickets, and then trigger recovery steps."
+  },
+  {
+    "slide_number": 5,
+    "title": "6-Month Strategic Roadmap: Production SRE & Observability Mastery",
+    "subtitle": "Systematic Transformation from Scripted Triage to an Autonomous Reliability Platform",
+    "layout": "roadmap",
+    "bullets": [
+      "Months 1–2 (Observability Foundations): Standardize custom Python Prometheus exporters and dynamic alerting rule compilation pipelines integrated directly into CI/CD workflows.",
+      "Months 3–4 (Automated Diagnostics & Triage): Deploy async diagnostic engines and Alertmanager webhook handlers for instant, non-destructive forensic artifact capture.",
+      "Months 5–6 (Autonomous Remediation & Reliability): Roll out closed-loop self-healing runbooks, execution circuit breakers, and automated RCA synthesis across core production clusters."
+    ],
+    "takeaway": "Transitioning to autonomous SRE operations requires a phased maturity model—starting with standardized metric export, advancing to automated triage, and maturing into safe, closed-loop self-healing.",
+    "notes": "Walk through the tactical rollout strategy. Strongly advise against jumping directly to autonomous remediation without first building and proving the diagnostic collection pipeline and execution safety guardrails."
+  
+]
+2026-11-04 00:18:59,146 [INFO] Generating mock research data for topic: Python for DevOps | Part: 3
+2026-11-04 00:18:59,146 [INFO] Writing study guide and notes...
+2026-11-04 00:18:59,146 [INFO] Generating PPTX for 'Python for DevOps - Part 3' using python-pptx...
+2026-11-04 00:18:59,198 [INFO] Successfully generated beautiful presentation at: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/python-for-devops/part3/presentation/python-for-devops-part3.pptx
+2026-11-04 00:18:59,198 [INFO] Compiling PDF for topic 'Python for DevOps - Part 3' using fpdf2...
+2026-11-04 00:19:00,016 [INFO] Successfully generated beautiful PDF guide at: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/python-for-devops/part3/pdf/python-for-devops-part3.pdf
+2026-11-04 00:19:00,017 [INFO] Pruning old study manuals and presentations from workspace...
+2026-11-04 00:19:00,019 [INFO] Deleted old asset: python-for-devops/part2/pdf/python-for-devops-part2.pdf
+2026-11-04 00:19:00,023 [INFO] Deleted old asset: python-for-devops/part2/presentation/python-for-devops-part2.pptx
+2026-11-04 00:19:00,025 [INFO] Writing metadata.json records...
+2026-11-04 00:19:00,025 [INFO] Progress updated: Python for DevOps (Part 3) marked completed. Completion: 30.61%
+2026-11-04 00:19:00,025 [INFO] ============================================================
+2026-11-04 00:19:00,026 [INFO]             DEVOPS LEARNING PIPELINE DASHBOARD
+2026-11-04 00:19:00,026 [INFO] ============================================================
+2026-11-04 00:19:00,026 [INFO]  Completion Status: [=========---------------------] 30.61%
+2026-11-04 00:19:00,026 [INFO]  Completed Topics:  45 / 147
+2026-11-04 00:19:00,026 [INFO]  Next Topic Up:     Bash scripting (Part 1)
+2026-11-04 00:19:00,026 [INFO] ------------------------------------------------------------
+2026-11-04 00:19:00,026 [INFO]  Last Studied:      Python for DevOps (Part 3)
+2026-11-04 00:19:00,026 [INFO] ============================================================
+2026-11-04 00:19:00,026 [INFO] Initiating automated email delivery to: ashusharma181996@gmail.com...
+2026-11-04 00:19:00,028 [INFO] Connecting to SMTP server: smtp.gmail.com:587...
+2026-11-04 00:19:00,175 [INFO] Performing SMTP login authentication...
+2026-11-04 00:19:00,420 [INFO] Transmitting email payload...
+2026-11-04 00:19:03,434 [INFO] Successfully delivered study guides to your mailbox.
+2026-11-04 00:19:03,434 [INFO] Initiating Git check-in for topic: Python for DevOps (Part 3) at root /home/runner/work/devops_learning_pipeline/devops_learning_pipeline
+2026-11-04 00:19:03,434 [INFO] Staging files...
