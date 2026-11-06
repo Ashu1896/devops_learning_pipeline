@@ -44,10 +44,10 @@
     "GCP (Part 3)",
     "Python for DevOps (Part 1)",
     "Python for DevOps (Part 2)",
-    "Python for DevOps (Part 3)"
+    "Python for DevOps (Part 3)",
+    "Bash scripting (Part 1)"
   ],
   "pending": [
-    "Bash scripting (Part 1)",
     "Bash scripting (Part 2)",
     "Bash scripting (Part 3)",
     "Monitoring (Part 1)",
@@ -150,8 +150,8 @@
     "Production deployment strategies (Part 2)",
     "Production deployment strategies (Part 3)"
   ],
-  "percentage": 30.61,
-  "last_run": "2026-11-04T00:19:00.025383",
+  "percentage": 31.29,
+  "last_run": "2026-11-06T23:52:58.631238",
   "history": [
     {
       "topic": "Linux (Part 1)",
@@ -332,6 +332,10 @@
     {
       "topic": "Python for DevOps (Part 3)",
       "timestamp": "2026-11-04T00:19:00.025383"
+    },
+    {
+      "topic": "Bash scripting (Part 1)",
+      "timestamp": "2026-11-06T23:52:58.631238"
     }
   ]
 }
