@@ -1,0 +1,12 @@
+{
+  "topic": "Bash scripting",
+  "part": 2,
+  "generated_at": "2026-11-11T00:20:28.139086",
+  "dry_run": false,
+  "engine": "gemini",
+  "files": {
+    "notes": "/bash-scripting/part2/notes/summary.md",
+    "pdf": "/bash-scripting/part2/pdf/bash-scripting-part2.pdf",
+    "presentation": "/bash-scripting/part2/presentation/bash-scripting-part2.pptx"
+  }
+}
