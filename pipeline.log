@@ -3588,3 +3588,128 @@ Please retry in 27m4.555093672s. [links {
 2026-11-14 00:35:56,886 [INFO] Successfully delivered study guides to your mailbox.
 2026-11-14 00:35:56,886 [INFO] Initiating Git check-in for topic: Bash scripting (Part 3) at root /home/runner/work/devops_learning_pipeline/devops_learning_pipeline
 2026-11-14 00:35:56,886 [INFO] Staging files...
+2026-11-18 01:54:18,201 [INFO] Pipeline started processing topic: 'Monitoring' | Part: 1
+2026-11-18 01:54:18,201 [INFO] Ensuring folder structure...
+2026-11-18 01:54:18,201 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/monitoring/part1
+2026-11-18 01:54:18,201 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/monitoring/part1/presentation
+2026-11-18 01:54:18,202 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/monitoring/part1/pdf
+2026-11-18 01:54:18,202 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/monitoring/part1/assets/diagrams
+2026-11-18 01:54:18,202 [INFO] Ensured folder: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/monitoring/part1/notes
+2026-11-18 01:54:18,202 [INFO] Executing deep technical research for Monitoring Part 1...
+2026-11-18 01:54:18,202 [INFO] Initiating deep research for topic: Monitoring | Part: 1 using API: gemini
+2026-11-18 01:54:18,202 [INFO] Stage 1/3: Generating Study Guide for Part 1...
+2026-11-18 01:54:18,732 [INFO] Available models in catalog: ['models/gemini-3.5-flash', 'models/gemini-2.5-flash', 'models/gemini-flash-latest']
+2026-11-18 01:54:18,733 [INFO] Selected model for attempt 1/3: models/gemini-3.5-flash
+2026-11-18 01:54:18,733 [INFO] Invoking model models/gemini-3.5-flash (attempt 1/3, temp=0.7)...
+2026-11-18 01:54:36,519 [WARNING] Attempt 1/3 with model models/gemini-3.5-flash failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.6-flash, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.
+Please retry in 23.487228181s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://aistudio.google.com/docs/rate-limits"
+}
+, violations {
+  description: "Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits."
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.6-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 5
+}
+, retry_delay {
+  seconds: 23
+}
+]
+2026-11-18 01:54:36,519 [INFO] Selected model for attempt 2/3: models/gemini-2.5-flash
+2026-11-18 01:54:36,519 [INFO] Invoking model models/gemini-2.5-flash (attempt 2/3, temp=0.85)...
+2026-11-18 01:56:47,320 [INFO] Stage 2/3: Generating Interview Preparation Section (Q1 to Q20)...
+2026-11-18 01:56:47,452 [INFO] Available models in catalog: ['models/gemini-3.5-flash', 'models/gemini-2.5-flash', 'models/gemini-flash-latest']
+2026-11-18 01:56:47,452 [INFO] Selected model for attempt 1/3: models/gemini-3.5-flash
+2026-11-18 01:56:47,452 [INFO] Invoking model models/gemini-3.5-flash (attempt 1/3, temp=0.7)...
+2026-11-18 01:56:57,520 [WARNING] Attempt 1/3 with model models/gemini-3.5-flash failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-3.6-flash, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.
+Please retry in 2.485669689s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://aistudio.google.com/docs/rate-limits"
+}
+, violations {
+  description: "Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits."
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.6-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 5
+}
+, retry_delay {
+  seconds: 2
+}
+]
+2026-11-18 01:56:57,520 [INFO] Selected model for attempt 2/3: models/gemini-2.5-flash
+2026-11-18 01:56:57,520 [INFO] Invoking model models/gemini-2.5-flash (attempt 2/3, temp=0.85)...
+2026-11-18 01:59:04,183 [INFO] Stage 3/3: Generating structured PowerPoint outlines...
+2026-11-18 01:59:04,294 [INFO] Available models in catalog: ['models/gemini-3.5-flash', 'models/gemini-2.5-flash', 'models/gemini-flash-latest']
+2026-11-18 01:59:04,294 [INFO] Selected model for attempt 1/3: models/gemini-3.5-flash
+2026-11-18 01:59:04,294 [INFO] Invoking model models/gemini-3.5-flash (attempt 1/3, temp=0.7)...
+2026-11-18 01:59:05,780 [WARNING] Attempt 1/3 with model models/gemini-3.5-flash failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.
+Please retry in 6h54.232962506s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://aistudio.google.com/docs/rate-limits"
+}
+, violations {
+  description: "Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits."
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-3.6-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 21654
+}
+]
+2026-11-18 01:59:05,780 [INFO] Selected model for attempt 2/3: models/gemini-2.5-flash
+2026-11-18 01:59:05,781 [INFO] Invoking model models/gemini-2.5-flash (attempt 2/3, temp=0.85)...
+2026-11-18 01:59:21,492 [INFO] Writing study guide and notes...
+2026-11-18 01:59:21,492 [INFO] Generating PPTX for 'Monitoring - Part 1' using python-pptx...
+2026-11-18 01:59:21,542 [INFO] Successfully generated beautiful presentation at: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/monitoring/part1/presentation/monitoring-part1.pptx
+2026-11-18 01:59:21,542 [INFO] Compiling PDF for topic 'Monitoring - Part 1' using fpdf2...
+2026-11-18 01:59:23,358 [INFO] Successfully generated beautiful PDF guide at: /home/runner/work/devops_learning_pipeline/devops_learning_pipeline/monitoring/part1/pdf/monitoring-part1.pdf
+2026-11-18 01:59:23,358 [INFO] Pruning old study manuals and presentations from workspace...
+2026-11-18 01:59:23,360 [INFO] Deleted old asset: bash-scripting/part3/pdf/bash-scripting-part3.pdf
+2026-11-18 01:59:23,364 [INFO] Deleted old asset: bash-scripting/part3/presentation/bash-scripting-part3.pptx
+2026-11-18 01:59:23,367 [INFO] Writing metadata.json records...
+2026-11-18 01:59:23,367 [INFO] Progress updated: Monitoring (Part 1) marked completed. Completion: 33.33%
+2026-11-18 01:59:23,367 [INFO] ============================================================
+2026-11-18 01:59:23,368 [INFO]             DEVOPS LEARNING PIPELINE DASHBOARD
+2026-11-18 01:59:23,368 [INFO] ============================================================
+2026-11-18 01:59:23,368 [INFO]  Completion Status: [==========--------------------] 33.33%
+2026-11-18 01:59:23,368 [INFO]  Completed Topics:  49 / 147
+2026-11-18 01:59:23,368 [INFO]  Next Topic Up:     Monitoring (Part 2)
+2026-11-18 01:59:23,368 [INFO] ------------------------------------------------------------
+2026-11-18 01:59:23,368 [INFO]  Last Studied:      Monitoring (Part 1)
+2026-11-18 01:59:23,368 [INFO] ============================================================
+2026-11-18 01:59:23,368 [INFO] Initiating automated email delivery to: ashusharma181996@gmail.com...
+2026-11-18 01:59:23,371 [INFO] Connecting to SMTP server: smtp.gmail.com:587...
+2026-11-18 01:59:23,434 [INFO] Performing SMTP login authentication...
+2026-11-18 01:59:23,557 [INFO] Transmitting email payload...
+2026-11-18 01:59:25,211 [INFO] Successfully delivered study guides to your mailbox.
+2026-11-18 01:59:25,211 [INFO] Initiating Git check-in for topic: Monitoring (Part 1) at root /home/runner/work/devops_learning_pipeline/devops_learning_pipeline
+2026-11-18 01:59:25,211 [INFO] Staging files...

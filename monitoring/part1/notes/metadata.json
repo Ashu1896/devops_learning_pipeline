@@ -1,0 +1,12 @@
+{
+  "topic": "Monitoring",
+  "part": 1,
+  "generated_at": "2026-11-18T01:59:23.367096",
+  "dry_run": false,
+  "engine": "gemini",
+  "files": {
+    "notes": "/monitoring/part1/notes/summary.md",
+    "pdf": "/monitoring/part1/pdf/monitoring-part1.pdf",
+    "presentation": "/monitoring/part1/presentation/monitoring-part1.pptx"
+  }
+}
