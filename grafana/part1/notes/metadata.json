@@ -1,0 +1,12 @@
+{
+  "topic": "Grafana",
+  "part": 1,
+  "generated_at": "2026-11-28T02:17:57.170706",
+  "dry_run": false,
+  "engine": "gemini",
+  "files": {
+    "notes": "/grafana/part1/notes/summary.md",
+    "pdf": "/grafana/part1/pdf/grafana-part1.pdf",
+    "presentation": "/grafana/part1/presentation/grafana-part1.pptx"
+  }
+}
